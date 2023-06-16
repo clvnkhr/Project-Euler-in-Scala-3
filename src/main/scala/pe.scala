@@ -6,10 +6,10 @@ import scala.util.boundary, boundary.break
 import scala.runtime.AbstractFunction4
 
 def pe(number: Int) = number match
-  case _: 1 =>
+  case 1 =>
     (1 until 1000).filter(i => i % 3 == 0 || i % 5 == 0).sum
 
-  case _: 2 =>
+  case 2 =>
     @annotation.tailrec
     def pe002(f1: Int = 1, f2: Int = 1, total: Int = 0): Int =
       if f2 > 4000000 then total
@@ -19,10 +19,10 @@ def pe(number: Int) = number match
         pe002(f2, f3, newTotal)
     pe002()
 
-  case _: 3 =>
+  case 3 =>
     divisors(600851475143L).head
 
-  case _: 4 =>
+  case 4 =>
     val n = 999
     extension (n: Int)
       def isPalindrome: Boolean =
@@ -37,16 +37,16 @@ def pe(number: Int) = number match
       yield i * j
     ).max(using (a, b) => if a > b then 1 else -1)
 
-  case _: 5 =>
+  case 5 =>
     (1 to 20).map(BigInt(_)).foldLeft(BigInt(1))(lcm)
 
-  case _: 6 =>
+  case 6 =>
     sumFourthPowers(100) - sumCubes(100)
 
-  case _: 7 =>
+  case 7 =>
     primes(10001)
 
-  case _: 8 =>
+  case 8 =>
     (
       for i <- 0 until pe008data.length - 13
       yield pe008data
@@ -56,7 +56,7 @@ def pe(number: Int) = number match
         .foldLeft(BigInt(1))((a, b) => a * BigInt(b))
     ).max
 
-  case _: 9 =>
+  case 9 =>
     val maxlen: Int = 1000
     (for
       a <- 1 to maxlen
@@ -64,11 +64,11 @@ def pe(number: Int) = number match
       if a * a + b * b == (maxlen - b - a) * (maxlen - b - a)
     yield a * b * (maxlen - b - a)).head
 
-  case _: 10 =>
+  case 10 =>
     // TODO: this would be faster if we implemented a sieve
     primes.takeWhile(_ < 2_000_000).foldLeft(0L)(_ + _.toLong)
 
-  case _: 11 => {
+  case 11 => {
     val numList = pe011data.split("\\s+").map(_.toLong)
     val gridMap = (
       for
@@ -87,13 +87,13 @@ def pe(number: Int) = number match
     ).max
   }
 
-  case _: 12 =>
+  case 12 =>
     def numFactors(n: Int): Long =
       factorization(n).map((prime, pow) => pow + 1).product
     val triangles = LazyList.from(1).map(sumTo)
     triangles.filter(numFactors(_) > 500).head
 
-  case _: 13 =>
+  case 13 =>
     pe013data
       .split("\\s+")
       .map(BigInt(_))
@@ -101,7 +101,7 @@ def pe(number: Int) = number match
       .toString
       .take(10) // .toLong
 
-  case _: 14 => {
+  case 14 => {
     val m: Int = 1000000
     /* returns the length of the collatz sequence starting at n
      * */
@@ -116,13 +116,13 @@ def pe(number: Int) = number match
       .reduceLeft((p, q) => if p(1) > q(1) then p else q)(0)
   }
 
-  case _: 15 => binom(40, 20)
+  case 15 => binom(40, 20)
   // Explanation: take h=20 steps down and w=20 steps right, in any order.
   // Use balls and bins model
   //
-  case _: 16 => (2 ** 1000).toString.toList.map(_.toString.toInt).sum
+  case 16 => (2 ** 1000).toString.toList.map(_.toString.toInt).sum
 
-  case _: 17 => {
+  case 17 => {
     def basicToEnglish: Map[Int, String] = Map(
       1 -> "one",
       2 -> "two",
@@ -165,7 +165,7 @@ def pe(number: Int) = number match
     (1 to 1000).map(toEnglish(_).length).sum
   }
 
-  case _: 18 => {
+  case 18 => {
     val triRows =
       pe018data.split("\n").toList.map(_.trim.split(" ").toList.map(_.toInt))
     def pathsum(directions: String): Long =
@@ -188,7 +188,7 @@ def pe(number: Int) = number match
     ).max
   }
 
-  case _: 19 => {
+  case 19 => {
     val firstYear = 1901
     val lastYear = 2000
     def leapYear(year: Int): Boolean =
@@ -217,10 +217,10 @@ def pe(number: Int) = number match
       .sum
   }
 
-  case _: 20 =>
+  case 20 =>
     factorial(100).toString.map(_.toString.toInt).foldLeft(0)(_ + _)
 
-  case _: 21 =>
+  case 21 =>
     def amicUpto(n: Int): List[Int] =
       for
         i <- (2 to n).toList
@@ -229,7 +229,7 @@ def pe(number: Int) = number match
       yield i
     amicUpto(10000).takeWhile(_ < 10000).sum
 
-  case _: 22 =>
+  case 22 =>
     val home = java.io.File(".").getAbsolutePath().dropRight(1)
     val bufferedSource =
       io.Source.fromFile(s"${home}src/main/scala/pe022names.txt")
@@ -246,7 +246,7 @@ def pe(number: Int) = number match
       .map(n => score(sortedNames.indexOf(n) + 1, n))
       .sum
 
-  case _: 23 =>
+  case 23 =>
     // WARNING: quite slow
     val upperBd: Int = 28123
     val abundants = LazyList.from(12).filter(_.isAbundant)
@@ -259,7 +259,7 @@ def pe(number: Int) = number match
     yield (i + j)).distinct.sum
   // solution with distinct is faster than toSet (!)
 
-  case _: 24 =>
+  case 24 =>
     // TODO: redo with pure math
     lazy val canonicalLists = (0 to 10).map(i => lexicoPerm((0 until i).toList))
     def lexicoPerm[A](lst: List[A]): LazyList[List[A]] =
@@ -276,14 +276,14 @@ def pe(number: Int) = number match
     end lexicoPerm
     lexicoPerm((0 to 9).toList)(1_000_000 - 1).mkString // .toLong
 
-  case _: 25 =>
+  case 25 =>
     @annotation.tailrec
     def fibpe25(index: Int, prev1: BigInt, prev2: BigInt): Int =
       if prev1 >= pow(10, 1000 - 1) then index
       else fibpe25(index + 1, prev1 + prev2, prev1)
     fibpe25(2, 1, 1)
 
-  case _: 26 =>
+  case 26 =>
     // NOTE: answer can be obtained from the OEIS: https://oeis.org/A051626/b051626.txt
     // INFO: we say 1/n has a prefix of length p and reptend of length r if
     // n = 0.a1a2a3...apb1b2...brb1b2...br...
@@ -316,7 +316,7 @@ def pe(number: Int) = number match
 
     best(0)
   //
-  case _: 27 =>
+  case 27 =>
     // INFO: for n*n +  a*n + b to be prime at n=0,
     // we need b to be prime (and positive).
     // We also need a to be odd
@@ -336,7 +336,7 @@ def pe(number: Int) = number match
 
     aMax * bMax
 
-  case _: 28 =>
+  case 28 =>
     val sideLength = 1001
     val numSquares = (sideLength + 1) / 2
 
@@ -353,7 +353,7 @@ def pe(number: Int) = number match
       n
     )).sum - 3 // INFO: take off 3 for overcounting the initial 1 in the center
 
-  case _: 29 =>
+  case 29 =>
     def naiveCounter(n: Int) =
       (for
         a <- 2 to n
@@ -362,12 +362,12 @@ def pe(number: Int) = number match
 
     naiveCounter(100)
 
-  case _: 30 =>
+  case 30 =>
     def pe30(n: Int) = digits(n).map(_ ** 5).sum == n
     // INFO: no n>=7 digit numbers are possible. 9^5 * 7 = 413,343 which is only 6 digits.
     (2 to 1000_000).filter(pe30).sum
 
-  case _: 31 =>
+  case 31 =>
     (for // INFO: no need for dynamic programming...
       gbp2 <- (0 to 1)
       gbp1 <- (0 to 2 - 2 * gbp2)
@@ -380,7 +380,7 @@ def pe(number: Int) = number match
     // INFO: the number of one pence coins is fixed by the choice of the other coins
     yield 1).sum
 
-  case _: 32 =>
+  case 32 =>
     def pandigital(a: Int, b: Int, c: Int): Boolean =
       val combined = (digits(a) ++ digits(b) ++ digits(c))
       (1 to 9).forall(x => combined.contains(x))
@@ -405,7 +405,7 @@ def pe(number: Int) = number match
         .exists(factor => pandigital(x, factor, x / factor))
     yield x).sum
 
-  case _: 33 =>
+  case 33 =>
     // INFO:
     // trivial fractions:
     // a0/b0, aa/bb, or generally F*a/F*b where a,b= 1...9; F*a,F*b<100.
@@ -448,7 +448,7 @@ def pe(number: Int) = number match
     val (num, denom, _) = type1.reduce((x, y) => (x(0) * y(0), x(1) * y(1), 0))
     denom / gcd(num, denom)
 
-  case _: 34 =>
+  case 34 =>
     // INFO:
     // abc...z > 10^(n-1) (exponential) where n is the number of digits.
     // 9!+9!+...+9! is linear in the number of 9s.
@@ -466,7 +466,7 @@ def pe(number: Int) = number match
       if digits(i).map(factorial).sum == i
     yield i).sum
 
-  case _: 35 =>
+  case 35 =>
     extension (p: Int)
       def isCircular: Boolean =
         def circ(digs: Seq[Int], step: Int): Boolean =
@@ -494,7 +494,7 @@ def pe(number: Int) = number match
 
     (1 to 6).map(circularPrimes(_).length).sum
 
-  case _: 36 =>
+  case 36 =>
     (for
       n <- 1 to 999999
       digs = digits(n)
@@ -503,7 +503,7 @@ def pe(number: Int) = number match
       if bins == bins.reverse
     yield n).sum
 
-  case _: 37 =>
+  case 37 =>
     // a smarter solution might be to cache and build upwards from 2,3,5,7
     def rightTrunc(n: Int) = n / 10
     def leftTrunc(n: Int): Int =
@@ -528,7 +528,7 @@ def pe(number: Int) = number match
     }
     acc.sum - 17 // subtracting 2+3+5+7
 
-  case _: 38 =>
+  case 38 =>
     // INFO: for the concatenated product (CP) of X and (1,...,n), clearly n<10 or there are too many digits
     // for n = 9, only X=1 works and the CP is the infimal value 123456789.
     // for n = 8, there are no solutions; once X>1 then 5*X,...,8*X have 2 digits each, for 3 digits too many
@@ -567,7 +567,7 @@ def pe(number: Int) = number match
       currMax = currMax max candidate.toInt
     currMax
 
-  case _: 39 =>
+  case 39 =>
     val crudeBd = math.ceil(math.sqrt(1000)).toInt
     // generate all primitive triples which sum to at most 1000, and store their sum
     // c.f. https://en.wikipedia.org/wiki/Pythagorean_triple
@@ -597,7 +597,7 @@ def pe(number: Int) = number match
       (p, sums.takeWhile(_ <= p).count(p % _ == 0))
     numSols.maxBy((_, b) => b)._1
 
-  case _: 40 =>
+  case 40 =>
     // 1 to 9: 9 digits.
     // 10 to 99: 2 digits each, 99 - 10 + 1 numbers = 2*90 = 180 digits.     total:   189
     // 100 to 999: 3 digits each, 999-100+1 numbers = 3*900 = 2700 digits.   total:  2889
@@ -611,7 +611,7 @@ def pe(number: Int) = number match
       .map(i => cache(i - 1).toString.toInt)
       .product
 
-  case _: 41 =>
+  case 41 =>
     // INFO:
     // there cannot be a 9-pandigital prime, as 1 + ... + 9 = 9*10/2 = 45 = 0 mod 3.
     // similarly there cannot be a 8-pandigital prime; 8*9/2 = 4*9 = 36 = 0 mod 3.
@@ -640,7 +640,7 @@ def pe(number: Int) = number match
       .filter(p => (1 to 7).forall(digits(p).contains(_)))
       .last
 
-  case _: 42 =>
+  case 42 =>
     val home = java.io.File(".").getAbsolutePath().dropRight(1)
     val bufferedSource =
       io.Source.fromFile(s"${home}src/main/scala/pe042words.txt")
@@ -659,7 +659,7 @@ def pe(number: Int) = number match
       if triangles.contains(pt)
     yield 1).sum
 
-  case _: 43 =>
+  case 43 =>
     // INFO:
     // d2d3d4  div by 2  : d4 % 2 == 0: d4=0,2,4,6,8
     // d3d4d5  div by 3  : d3 + d4 + d5 % 3 == 0
@@ -702,7 +702,7 @@ def pe(number: Int) = number match
       ds = Seq(d1, d2, d3, d4, d5, d6, d7, d8, d9, d10)
     yield BigInt(ds.mkString)).sum
 
-  case _: 44 =>
+  case 44 =>
     // INFO: Pentagonal numbers: n(3n-1)/2: 1, 5, 12, 22, 35,... (A000326 in the OEIS).
     val pent = from(1, 1).map(n => n * (3 * n - 1) / 2)
     (for
@@ -711,7 +711,7 @@ def pe(number: Int) = number match
       if (p - q).isPent && (p + q).isPent
     yield p - q).head
 
-  case _: 45 =>
+  case 45 =>
     from(1, 1)
       .map(i => { i.toLong * (2 * i - 1) })
       .filter(h => h.isTri && h.isPent)
@@ -719,7 +719,7 @@ def pe(number: Int) = number match
       .tail
       .head
 
-  case _: 46 =>
+  case 46 =>
     val squares = from(1, 1).map(i => i.toLong * i)
     val odds = from(1, 1).map(i => 2 * i + 1)
 
@@ -730,17 +730,17 @@ def pe(number: Int) = number match
       )
       .head
 
-  case _: 47 =>
+  case 47 =>
     (for
       i <- from(647, 1)
       fs = LazyList(0, 1, 2, 3).map(j => factorization(i + j))
       if fs.forall(_.size == 4)
     yield i).head
 
-  case _: 48 =>
+  case 48 =>
     (1 to 1000).map(i => BigInt(i) ** i).sum.toString.takeRight(10)
 
-  case _: 49 =>
+  case 49 =>
     val candidatePrimes = primes.dropWhile(_ < 1_000).takeWhile(_ < 10_000)
     (for
       p <- candidatePrimes
@@ -757,7 +757,7 @@ def pe(number: Int) = number match
           .head == p + 2 * k
     yield s"$p${p + k}${p + 2 * k}").tail.head
 
-  case _: 50 =>
+  case 50 =>
     // INFO:
     // step1 sum from 2 until we hit 1_000_000
     // step2 sum from 3 until we hit 1_000_000, going two primes at a time
@@ -791,6 +791,43 @@ def pe(number: Int) = number match
         (p._1, temp._1, temp._2)
     ((2, maxFrom2._1, maxFrom2._2) #:: maxFroms).maxBy(_._3)._2
 
+  case 51 =>
+    // INFO:
+    // to get 8 primes, we cannot replace the last digit: the last digit cannot be 0,2,4,5,6,8. It must be one of 1,3,7,9.
+    // If the last digit is 3, or 9 we cannot replace all the digits with 3,6 or 9. This means that there are 10-3 = 7 digits left; so 8 is impossible.
+    // go through primes and change their repeating digits?
+    // if we cycle through 8 single digits, 1,2,3,4,5,6,7,8,9,0, one of them will be divisible by 3. See the possible digit sums mod 3:
+    //                                      0,1,2,0,1,2,0,1,2,0, 4 numbers div by 3,
+    //                                      1,2,0,1,2,0,1,2,0,1, 3                3,
+    //                                      2,0,1,2,0,1,2,0,1,2. 3                3.
+    // if we cycle through 8 double digits, i.e. 8 of 00,11,22,33,44,55,66,77,88,99, the digit sums are adjusted by
+    // .                                               0, 2, 1, 0, 2, 1, 0, 2, 1, 0. Similarly impossible.
+    // 8 triple digits: 000,111,222,333,444,555,666,777,888,999
+    // adjusts digit sum by 0,...,0 (!)
+    // pattern emerges. need to replace triples, sextuples or 9 digits at once.
+
+    (for
+      p <- primes.dropWhile(_ <= 56003)
+      digs = digits(p)
+      if (0 to 9).exists(d =>
+        digs.count(_ == d) > 0
+          && digs.count(_ == d) % 3 == 0
+          && (0 to 9).count(j =>
+            digs.map({ case d => { println(digs); j } }).toInt.isPrime
+          ) >= 8
+      )
+    yield p).head
+
+  case 52 =>
+    (for
+      x <- (100_000 until 1_000_000 / 6).to(LazyList)
+      digs = digits(x).sorted
+      if digits(6 * x).sorted == digs
+        && digits(5 * x).sorted == digs
+        && digits(4 * x).sorted == digs
+        && digits(3 * x).sorted == digs
+        && digits(2 * x).sorted == digs
+    yield x).head
   case _ => ???
 
 @main def main(args: Int*): Unit =
