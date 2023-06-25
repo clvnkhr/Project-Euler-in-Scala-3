@@ -1,1 +1,39 @@
-[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/myworksheets_3-0.1.0-SNAPSHOT.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mPackaging /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/myworksheets_3-0.1.0-SNAPSHOT.jar ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TicTacToe.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/TicTacToe.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TicTacToe.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/TicTacToe.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/pe$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/pe$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/util[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/util[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/util/Util$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/util/Util$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/util/Util$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/util/Util$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/util/Util$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/util/Util$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/numbertheory[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/numbertheory[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/numbertheory/Numbertheory$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/numbertheory/Numbertheory$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/numbertheory/Numbertheory$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/numbertheory/Numbertheory$package$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/numbertheory/Numbertheory$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/numbertheory/Numbertheory$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/pe$package$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/pe$package$$anon$1.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/pe$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/pe$package.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/main.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/main.tasty[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/main.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	projecteuler/pe$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/projecteuler/pe$package.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	TicTacToe$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0m	  /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes/TicTacToe$.class[0m
+[0m[[0m[0mdebug[0m] [0m[0mDone packaging.[0m

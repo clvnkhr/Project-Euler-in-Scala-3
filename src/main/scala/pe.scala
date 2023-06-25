@@ -3,7 +3,6 @@ package projecteuler
 import projecteuler.util._
 import projecteuler.numbertheory._
 import scala.util.boundary, boundary.break
-import scala.runtime.AbstractFunction4
 
 def pe(number: Int) = number match
   case 1 =>
@@ -368,17 +367,28 @@ def pe(number: Int) = number match
     (2 to 1000_000).filter(pe30).sum
 
   case 31 =>
-    (for // INFO: no need for dynamic programming...
-      gbp2 <- (0 to 1)
-      gbp1 <- (0 to 2 - 2 * gbp2)
-      p50 <- (0 to 4 - 4 * gbp2 - 2 * gbp1)
-      p20 <- (0 to (20 - 20 * gbp2 - 10 * gbp1 - 5 * p50) / 2)
-      p10 <- (0 to 20 - 10 * gbp1 - 5 * p50 - 2 * p20)
-      p5 <- (0 to 40 - 40 * gbp2 - 20 * gbp1 - 10 * p50 - 4 * p20 - 2 * p10)
-      p2 <-
-        (0 to (200 - 200 * gbp2 - 100 * gbp1 - 50 * p50 - 20 * p20 - 10 * p10 - 5 * p5) / 2)
-    // INFO: the number of one pence coins is fixed by the choice of the other coins
-    yield 1).sum
+    // (for // INFO: no need for dynamic programming...
+    //   gbp2 <- (0 to 1)
+    //   gbp1 <- (0 to 2 - 2 * gbp2)
+    //   p50 <- (0 to 4 - 4 * gbp2 - 2 * gbp1)
+    //   p20 <- (0 to (20 - 20 * gbp2 - 10 * gbp1 - 5 * p50) / 2)
+    //   p10 <- (0 to 20 - 10 * gbp1 - 5 * p50 - 2 * p20)
+    //   p5 <- (0 to 40 - 40 * gbp2 - 20 * gbp1 - 10 * p50 - 4 * p20 - 2 * p10)
+    //   p2 <-
+    //     (0 to (200 - 200 * gbp2 - 100 * gbp1 - 50 * p50 - 20 * p20 - 10 * p10 - 5 * p5) / 2)
+    // // INFO: the number of one pence coins is fixed by the choice of the other coins
+    // yield 1).sum
+
+    // tail-recursive version:
+    val coins = 1 :: 2 :: 5 :: 10 :: 20 :: 50 :: 100 :: 200 :: Nil
+    def pe31(amount: Int, coins: List[Int]): Int = (amount, coins) match
+      case (0, _)   => 1
+      case (_, Nil) => 0
+      case (amount, _) =>
+        if coins.head > amount then 0
+        else pe31(amount, coins.tail) + pe31(amount - coins.head, coins)
+
+    pe31(200, coins)
 
   case 32 =>
     def pandigital(a: Int, b: Int, c: Int): Boolean =
