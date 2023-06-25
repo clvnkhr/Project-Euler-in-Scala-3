@@ -1,5 +1,5 @@
 # Project Euler in Scala 3
- Solutions to the first few Project Euler problems in Scala 3
+ Solutions to the first 50 Project Euler problems in Scala 3
 
 ## Usage
  1. Install Scala 3.3
