@@ -1,6 +1,6 @@
 
-ñÌsrc/main/scala/pe.scala*I
-%projecteuler/pe$package.pe().(number)*numberÄä"
+ñÌsrc/main/scala/PE.scala*I
+%projecteuler/PE$package.pe().(number)*numberÄä"
 
 scala/Int#*%
 local0*iÄä"
@@ -1052,14 +1052,14 @@ scala/Int#*q
 VTscala/Tuple2#
 scala/Int#31scala/collection/immutable/Seq#
 scala/Int#*µ
-projecteuler/pe$package.pe().*peÄäÑÅ'
-%projecteuler/pe$package.pe().(number)VíS
+projecteuler/PE$package.pe().*peÄäÑÅ'
+%projecteuler/PE$package.pe().(number)VíS
 
 scala/Int#
 scala/Long#
 scala/math/BigInt#
 scala/Predef.String#í: *K
-%projecteuler/pe$package.main().(args)*argsÄä"
+%projecteuler/PE$package.main().(args)*argsÄä"
 r
 
 scala/Int#*-
@@ -1071,14 +1071,14 @@ scala/Int#*:
 local323*problemÄä"
 
 scala/Int#*É
-projecteuler/pe$package.main().*mainj
+projecteuler/PE$package.main().*mainj
 scala/main#Ää<:'
-%projecteuler/pe$package.main().(args)scala/Unit#í: *”
-projecteuler/pe$package. *projecteulerÄä†
-ùjava/lang/Object#¢projecteuler/pe$package."e
-#projecteuler/pe$package.`<init>`().
-projecteuler/pe$package.pe().
-projecteuler/pe$package.main().*ñ
+%projecteuler/PE$package.main().(args)scala/Unit#í: *”
+projecteuler/PE$package. *projecteulerÄä†
+ùjava/lang/Object#¢projecteuler/PE$package."e
+#projecteuler/PE$package.`<init>`().
+projecteuler/PE$package.pe().
+projecteuler/PE$package.main().*ñ
 projecteuler/main# *mainÄäm
 kjava/lang/Object#projecteuler/main#":
 projecteuler/main#`<init>`().
@@ -1095,8 +1095,8 @@ kjava/lang/Object#projecteuler/main#":
 % *scala/util/boundary.break().2
  
 scala/Int#23
- %projecteuler/pe$package.pe().(number)23
- %projecteuler/pe$package.pe().(number)2,
+ %projecteuler/PE$package.pe().(number)23
+ %projecteuler/PE$package.pe().(number)2,
  scala/runtime/RichInt#until().2C
  5scala/collection/StrictOptimizedIterableOps#filter().2
  local02
@@ -5082,18 +5082,18 @@ scala/Int#2
 «« +scala/collection/immutable/LazyList#head().2%
 
 »» scala/Predef.`???`().2+
- projecteuler/pe$package.pe().2
+ projecteuler/PE$package.pe().2
 
    scala/main#2
 
    
 scala/Int#25
 
-   %projecteuler/pe$package.main().(args)2
+   %projecteuler/PE$package.main().(args)2
 
     scala/Unit#25
 
-ÀÀ 	%projecteuler/pe$package.main().(args)21
+ÀÀ 	%projecteuler/PE$package.main().(args)21
 
 À
 À !scala/collection/SeqOps#length().2#
@@ -5110,7 +5110,7 @@ scala/Int#25
 
 Ã-Ã 4local3212-
 
-Ã6Ã 8projecteuler/pe$package.pe().2
+Ã6Ã 8projecteuler/PE$package.pe().2
 
 Ã9Ã @local3212*
 
@@ -5118,7 +5118,7 @@ scala/Int#25
 
 ÕÕ local32225
 
-ŒŒ %projecteuler/pe$package.main().(args)2;
+ŒŒ %projecteuler/PE$package.main().(args)2;
 
 ŒŒ +scala/collection/IterableOnceOps#foreach().2
 
@@ -5128,12 +5128,12 @@ scala/Int#25
 
 Œ&Œ -local3232-
 
-Œ/Œ 1projecteuler/pe$package.pe().2
+Œ/Œ 1projecteuler/PE$package.pe().2
 
 Œ2Œ 9local3232/
 
  
-  projecteuler/pe$package.main().2
+  projecteuler/PE$package.main().2
  projecteuler/PZ FB761F27FB90A16256A88A4A65455C04b,
  < B
 2
