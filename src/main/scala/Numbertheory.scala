@@ -82,7 +82,13 @@ val primesFrom5: LazyList[Int] = 5 #:: 7 #:: no2no3(11)
 
 extension (n: Int)
   def **(power: Int) = pow(n, power)
-  def isPrime = primes.takeWhile(_ <= n).contains(n)
+
+  // below implementation of isPrime is slow because primes is a lazy list.
+
+  def isPrime = n > 1 && primes.takeWhile(_ <= math.sqrt(n)).forall(n % _ != 0)
+  // below is slower
+  // def isPrime = primes.dropWhile(_ < n).head == n
+
   def numDigits: Int = { if n < 0 then -n else n }.toString.length
 
 extension (n: BigInt) def **(power: Int) = pow(n, power)

@@ -1,9 +1,2 @@
-[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E007] Type Mismatch Error: /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/src/main/scala/pe.scala:399:8 [0m[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m399 |[0m        [33mif[0m coins.head > amount [33mthen[0m [31m0[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Found:    Unit[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Required: Int[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m        Maybe you are missing an else part for the conditional?[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m[0m
-[0m[[0m[31merror[0m] [0m[0m[31m    |[0m longer explanation available when compiling with `-explain`[0m
-[0m[[0m[31merror[0m] [0m[0mone error found[0m
+[0m[[0m[33mwarn[0m] [0m[0mthere were 2 deprecation warnings; re-run with -deprecation for details[0m
+[0m[[0m[33mwarn[0m] [0m[0mone warning found[0m

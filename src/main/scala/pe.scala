@@ -332,7 +332,13 @@ def pe(number: Int) = number match
         a <- (-999 to 999 by 2)
       yield (a, b, numPrimesFromZero(a, b))
     ).maxBy((_, _, c) => c)
-
+    // (for
+    //   b <- primes.takeWhile(_ < 1000).toVector
+    //   a <- (-999 to 999 by 2)
+    // yield (a, b, numPrimesFromZero(a, b)))
+    //   .filter { case (_, _, c) => c > 5 }
+    //   .foreach(println)
+    print(s"(aMax, bMax)=($aMax, $bMax)")
     aMax * bMax
 
   case 28 =>
@@ -774,70 +780,76 @@ def pe(number: Int) = number match
     // number of primes we need: primes are increasing.
     // So it is not possible to use two primes larger than 500_000, 3 primes larger than 333_333, or n primes all larger than 1_000_000/n.
     //
-    val primesWithIndex = primes.zipWithIndex
-
-    val maxFrom2 = primesWithIndex
-      .scanLeft((0, 0))((a, b) => (a(0) + b(0), b(1) + 1))
-      // off-by-one for number of primes
-      .takeWhile(_(0) < 1_000_000)
-      .filter(_(0).isPrime)
-      .last
-
-    val maxFroms =
-      for
-        // INFO: any prime larger than 1_000_000 / maxFrom2._2 cannot beat the number of conseq. sums from 2.
-        p <- primesWithIndex.tail.takeWhile(_._1 < 1_000_000 / maxFrom2._2)
-        candidates = primesWithIndex
-          .drop(p(1))
-          // INFO: compute the consecutive sum starting from p. note off-by-one in indexing
-          .scanLeft((0, 0))((a, b) => (a(0) + b(0), b(1) + 1 - p(1)))
-          // INFO: if it doesn't beat the streak starting from 2, we don't need to check if it's prime. Also, jump twice.
-          .filter(t => t._2 > maxFrom2._2 && t._2 % 2 != 0)
-          .takeWhile(_(0) < 1_000_000)
-          .filter(_(0).isPrime)
-        if !candidates.isEmpty
-      yield
-        val temp = candidates.last
-        (p._1, temp._1, temp._2)
-    ((2, maxFrom2._1, maxFrom2._2) #:: maxFroms).maxBy(_._3)._2
+    // val primesWithIndex = primes.zipWithIndex
+    //
+    // val maxFrom2 = primesWithIndex
+    //   .scanLeft((0, 0))((a, b) => (a(0) + b(0), b(1) + 1))
+    //   // off-by-one for number of primes
+    //   .takeWhile(_(0) < 1_000_000)
+    //   .filter(_(0).isPrime)
+    //   .last
+    //
+    // val maxFroms =
+    //   for
+    //     // INFO: any prime larger than 1_000_000 / maxFrom2._2 cannot beat the number of conseq. sums from 2.
+    //     p <- primesWithIndex.tail.takeWhile(_._1 < 1_000_000 / maxFrom2._2)
+    //     candidates = primesWithIndex
+    //       .drop(p(1))
+    //       // INFO: compute the consecutive sum starting from p. note off-by-one in indexing
+    //       .scanLeft((0, 0))((a, b) => (a(0) + b(0), b(1) + 1 - p(1)))
+    //       // INFO: if it doesn't beat the streak starting from 2, we don't need to check if it's prime. Also, jump twice.
+    //       .filter(t => t._2 > maxFrom2._2 && t._2 % 2 != 0)
+    //       .takeWhile(_(0) < 1_000_000)
+    //       .filter(_(0).isPrime)
+    //     if !candidates.isEmpty
+    //   yield
+    //     val temp = candidates.last
+    //     (p._1, temp._1, temp._2)
+    // ((2, maxFrom2._1, maxFrom2._2) #:: maxFroms).maxBy(_._3)._2
+    ???
 
   case 51 =>
     // INFO:
     // to get 8 primes, we cannot replace the last digit: the last digit cannot be 0,2,4,5,6,8. It must be one of 1,3,7,9.
-    // If the last digit is 3, or 9 we cannot replace all the digits with 3,6 or 9. This means that there are 10-3 = 7 digits left; so 8 is impossible.
+    // If the last digit is 3, or 9 we cannot replace all the digits with 3,6 or 9.
+    // This means that there are 10-3 = 7 digits left; so 8 is impossible.
+    //
+    // INFO:
     // go through primes and change their repeating digits?
     // if we cycle through 8 single digits, 1,2,3,4,5,6,7,8,9,0, one of them will be divisible by 3. See the possible digit sums mod 3:
-    //                                      0,1,2,0,1,2,0,1,2,0, 4 numbers div by 3,
-    //                                      1,2,0,1,2,0,1,2,0,1, 3                3,
-    //                                      2,0,1,2,0,1,2,0,1,2. 3                3.
+    // ...                                  0,1,2,0,1,2,0,1,2,0, 4 numbers div by 3,
+    // ...                                  1,2,0,1,2,0,1,2,0,1, 3                3,
+    // ...                                  2,0,1,2,0,1,2,0,1,2. 3                3.
     // if we cycle through 8 double digits, i.e. 8 of 00,11,22,33,44,55,66,77,88,99, the digit sums are adjusted by
-    // .                                               0, 2, 1, 0, 2, 1, 0, 2, 1, 0. Similarly impossible.
+    // ...                                             0, 2, 1, 0, 2, 1, 0, 2, 1, 0. (mod 3) Similarly impossible.
     // 8 triple digits: 000,111,222,333,444,555,666,777,888,999
     // adjusts digit sum by 0,...,0 (!)
-    // pattern emerges. need to replace triples, sextuples or 9 digits at once.
+    // pattern emerges. need to replace triples, sextuples or 9 digits or ... at once.
+    //
+    // INFO:
+    // 8 different primes => by pigeonhole any set of three numbers must have one of the primes
 
     (for
       p <- primes.dropWhile(_ <= 56003)
       digs = digits(p)
-      if (0 to 9).exists(d =>
+      if Seq(0, 2, 4).exists(d =>
         digs.count(_ == d) > 0
           && digs.count(_ == d) % 3 == 0
-          && (0 to 9).count(j =>
-            digs.map({ case d => { println(digs); j } }).toInt.isPrime
-          ) >= 8
+          && (0 to 9).count(j => digs.map({ case d => j }).toInt.isPrime) >= 8
       )
     yield p).head
 
-  case 52 =>
-    (for
-      x <- (100_000 until 1_000_000 / 6).to(LazyList)
-      digs = digits(x).sorted
-      if digits(6 * x).sorted == digs
-        && digits(5 * x).sorted == digs
-        && digits(4 * x).sorted == digs
-        && digits(3 * x).sorted == digs
-        && digits(2 * x).sorted == digs
-    yield x).head
+  case 52 => 142857
+  // INFO: brute force follows below. But the answer is simply the repeating fragment of 1/7.
+  // (for
+  //   x <- (100_000 until 1_000_000 / 6).to(LazyList)
+  //   digs = digits(x).sorted
+  //   if digits(6 * x).sorted == digs
+  //     && digits(5 * x).sorted == digs
+  //     && digits(4 * x).sorted == digs
+  //     && digits(3 * x).sorted == digs
+  //     && digits(2 * x).sorted == digs
+  // yield x).head
   case _ => ???
 
 @main def main(args: Int*): Unit =
