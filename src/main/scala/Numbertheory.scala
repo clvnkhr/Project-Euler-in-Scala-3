@@ -134,19 +134,19 @@ def fallingPow(n: Int, k: Int, drop: Int): BigInt =
 def factorial(n: Int): BigInt = fallingPow(n, n, 1)
 
 /** Theoretically, binom(n,k) is the number of ways to choose k things from n
-  * things, and can be written binom(n,k) = n!/(k!(n-k)!) fallingPow pre-cancels
-  * some factors for speed/accuracy
+  * things, and can be written binom(n,k) = n!/(k!(n-k)!). We use fallingPow
+  * which pre-cancels some factors for speed/accuracy
   * @param n
   * @param k
   * @return
   */
 def binom(n: Int, k: Int): BigInt =
 
-  val (small, big) = (math.min(k, n - k), math.max(k, n - k))
-  fallingPow(n, big, 1) / factorial(small)
+  val small = math.min(k, n - k)
+  fallingPow(n, small, 1) / factorial(small)
 
 def doublefactorial(n: Int) =
-  fallingPow(n, if n % 2 == 0 then n / 2 else (n - 1) / 2, 2)
+  fallingPow(n, n / 2, 2)
 
 /** Returns a non-increasing list of the prime divisors of n. Can probably be
   * sped up.... worst case is if n is a prime. then the algo takes O(n) steps.
@@ -157,6 +157,8 @@ def doublefactorial(n: Int) =
 def divisors(n: Long): List[Long] =
   @annotation.tailrec
   def divisors1(n: Long, k: Int, acc: List[Long]): List[Long] =
+    // TODO: there is an optimisation in the following:
+    // if primes(k) > sqrt(n) then it is already impossible, as we pull out factors from the smallest up.
     if n < primes(k) then acc
     else if n % primes(k) == 0 then
       divisors1(n / primes(k), primes(k), primes(k) :: acc)

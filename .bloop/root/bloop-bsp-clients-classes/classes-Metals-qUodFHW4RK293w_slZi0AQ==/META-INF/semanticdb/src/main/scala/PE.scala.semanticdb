@@ -1,5 +1,5 @@
 
-■хsrc/main/scala/PE.scala*I
+сьsrc/main/scala/PE.scala*I
 %projecteuler/PE$package.pe().(number)*numberАК"
 
 scala/Int#*%
@@ -1059,6 +1059,12 @@ scala/Int#*'
 scala/Int#*'
 local323*xАК"
 
+scala/Int#*'
+local324*nАК"
+
+scala/Int#*'
+local325*kАК"
+
 scala/Int#*╡
 projecteuler/PE$package.pe().*peАКДБ'
 %projecteuler/PE$package.pe().(number)VТS
@@ -1071,12 +1077,12 @@ scala/Int#
 r
 
 scala/Int#*-
-local324*problemАК"
+local326*problemАК"
 
 scala/Int#*:
-local325 А*eАК"" 
+local327 А*eАК"" 
 scala/NotImplementedError#*-
-local326*problemАК"
+local328*problemАК"
 
 scala/Int#*Г
 projecteuler/PE$package.main().*mainj
@@ -5065,64 +5071,82 @@ scala/Int#2
 ╬╬ 9projecteuler/numbertheory/Numbertheory$package.isPrime().27
 
 ╧╧ 
-'scala/collection/IterableOnceOps#min().2%
+'scala/collection/IterableOnceOps#min().2+
 
-▌▌ scala/Predef.`???`().2%
+▀▀ scala/runtime/RichInt#to().2
 
-▀▀ scala/Predef.`???`().2+
+▀▀ local3242+
+
+рр scala/runtime/RichInt#to().2
+
+рр local3242
+
+рр local3252G
+
+с	с 7projecteuler/numbertheory/Numbertheory$package.binom().2
+
+сс local3242
+
+сс local3252)
+
+сс scala/math/Ordered#`>`().27
+
+тт 'scala/collection/IterableOnceOps#sum().2%
+
+уу scala/Predef.`???`().2+
  projecteuler/PE$package.pe().2
 
-сс scala/main#2
+хх scala/main#2
 
-сс 
+хх 
 scala/Int#25
 
-сс %projecteuler/PE$package.main().(args)2
+хх %projecteuler/PE$package.main().(args)2
 
-сс  scala/Unit#25
+хх  scala/Unit#25
 
-тт 	%projecteuler/PE$package.main().(args)21
+цц 	%projecteuler/PE$package.main().(args)21
 
-т
-т !scala/collection/SeqOps#length().2#
+ц
+ц !scala/collection/SeqOps#length().2#
 
-тт scala/Int#`==`(+3).2F
+цц scala/Int#`==`(+3).2F
 
-уу 6projecteuler/numbertheory/Numbertheory$package.from().2>
+чч 6projecteuler/numbertheory/Numbertheory$package.from().2>
 
-уу .scala/collection/immutable/LazyList#foreach().2
+чч .scala/collection/immutable/LazyList#foreach().2
 
-уу "local32428
+чч "local32628
 
-у&у ,(projecteuler/util/Util$package.pprint().2
+ч&ч ,(projecteuler/util/Util$package.pprint().2
 
-у-у 4local3242-
+ч-ч 4local3262-
 
-у6у 8projecteuler/PE$package.pe().2
+ч6ч 8projecteuler/PE$package.pe().2
 
-у9у @local3242*
+ч9ч @local3262*
 
-фф %scala/NotImplementedError#2
+шш %scala/NotImplementedError#2
 
-фф local32525
+шш local32725
 
-хх %projecteuler/PE$package.main().(args)2;
+щщ %projecteuler/PE$package.main().(args)2;
 
-хх +scala/collection/IterableOnceOps#foreach().2
+щщ +scala/collection/IterableOnceOps#foreach().2
 
-хх local32628
+щщ local32828
 
-хх %(projecteuler/util/Util$package.pprint().2
+щщ %(projecteuler/util/Util$package.pprint().2
 
-х&х -local3262-
+щ&щ -local3282-
 
-х/х 1projecteuler/PE$package.pe().2
+щ/щ 1projecteuler/PE$package.pe().2
 
-х2х 9local3262/
+щ2щ 9local3282/
 
-с
-с projecteuler/PE$package.main().2
- projecteuler/PZ 6268577F5C3E07A4E114777DC52D7D39b,
+х
+х projecteuler/PE$package.main().2
+ projecteuler/PZ 8825DF1836C5A8144AB9FAF96C765785b,
  < B
 2
 
@@ -8065,14 +8089,57 @@ scala/Int#b>
 
 ╩╧ 
 
-scala/math/Ordering.Int.b1
+scala/math/Ordering.Int.b0
 
-уу #B!
+▐т "B 
 2
 
-уу scala/Unit#b1
+▐т 
+scala/Int#bN
 
-хх #B!
+▀▀ @
+>
+,*
+(scala/LowPriorityImplicits#intWrapper().2
+
+▀▀ bN
+
+рр @
+>
+,*
+(scala/LowPriorityImplicits#intWrapper().2
+
+рр bK
+
+с	с  =
+;
 2
 
-хх scala/Unit#
+с	с )
+'
+#!
+scala/math/BigInt.int2bigInt(). bE
+
+сс  7
+5
+#!
+scala/math/BigInt.int2bigInt().2
+
+сс  bG
+
+▐т 9
+7
+2
+
+▐т %#
+!scala/math/Numeric.IntIsIntegral.b1
+
+чч #B!
+2
+
+чч scala/Unit#b1
+
+щщ #B!
+2
+
+щщ scala/Unit#

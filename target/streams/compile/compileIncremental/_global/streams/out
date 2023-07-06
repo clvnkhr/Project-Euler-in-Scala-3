@@ -1,56 +1,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
 [0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
-[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 9 products, 3 sources, 2 libraries[0m
+[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 8 products, 3 sources, 2 libraries[0m
 [0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/main/scala/Numbertheory.scala, ${BASE}/src/main/scala/Util.scala, ${BASE}/src/main/scala/PE.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(${BASE}/src/main/scala/PE.scala), unmodified = ...),Set(),Set(),API Changes: Set())[0m
-[0m[[0m[0mdebug[0m] [0m[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial source changes:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	removed: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(${BASE}/src/main/scala/PE.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(projecteuler.PE$package, projecteuler.NoSolutionException, projecteuler.main)[0m
-[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(projecteuler.PE$package, projecteuler.NoSolutionException, projecteuler.main)[0m
-[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(${BASE}/src/main/scala/PE.scala)[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: projecteuler.PE$package, projecteuler.NoSolutionException, projecteuler.main[0m
-[0m[[0m[0mdebug[0m] [0m[0mcompilation cycle 1[0m
-[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mReturning already retrieved and compiled bridge: /Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-sbt-bridge/3.3.0/scala3-sbt-bridge-3.3.0.jar.[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 173abc68 for Scala Compiler version 3.3.0[0m
-[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
-[0m[[0m[0mdebug[0m] [0m[0m	/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.0/scala3-library_3-3.3.0.jar:/Users/calvinkhor/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar[0m
-[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
-[0m[[0m[0mdebug[0m] [0m[0m	/Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/target/scala-3.3.0/classes[0m
-[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.457708291 s[0m
-[0m[[0m[0mdebug[0m] [0m[0mdone compiling[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from projecteuler.NoSolutionException...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: projecteuler.NoSolutionException[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(projecteuler.NoSolutionException)[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(projecteuler.NoSolutionException,ModifiedNames(changes = UsedName(asInstanceOf,[Default]), UsedName($isInstanceOf,[Default]), UsedName(ne,[Default]), UsedName(finalize,[Default]), UsedName(NoSolutionException;init;,[Default]), UsedName(Throwable;init;,[Default]), UsedName(equals,[Default]), UsedName(fillInStackTrace,[Default]), UsedName(wait,[Default]), UsedName(setCause,[Default]), UsedName(notify,[Default]), UsedName(initCause,[Default]), UsedName(eq,[Default]), UsedName(Exception;init;,[Default]), UsedName(getStackTrace,[Default]), UsedName(getCause,[Default]), UsedName(hashCode,[Default]), UsedName(getClass,[Default]), UsedName(getSuppressed,[Default]), UsedName(printStackTrace,[Default]), UsedName(isInstanceOf,[Default]), UsedName(synchronized,[Default]), UsedName(!=,[Default]), UsedName(##,[Default]), UsedName(Object;init;,[Default]), UsedName(setStackTrace,[Default]), UsedName(toString,[Default]), UsedName(==,[Default]), UsedName(getLocalizedMessage,[Default]), UsedName(notifyAll,[Default]), UsedName(getMessage,[Default]), UsedName(clone,[Default]), UsedName(addSuppressed,[Default]), UsedName(Serializable;init;,[Default]), UsedName($asInstanceOf,[Default]), UsedName(NoSolutionException,[Default]))) invalidates 1 classes due to The projecteuler.NoSolutionException has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(asInstanceOf,[Default]), UsedName($isInstanceOf,[Default]), UsedName(ne,[Default]), UsedName(finalize,[Default]), UsedName(NoSolutionException;init;,[Default]), UsedName(Throwable;init;,[Default]), UsedName(equals,[Default]), UsedName(fillInStackTrace,[Default]), UsedName(wait,[Default]), UsedName(setCause,[Default]), UsedName(notify,[Default]), UsedName(initCause,[Default]), UsedName(eq,[Default]), UsedName(Exception;init;,[Default]), UsedName(getStackTrace,[Default]), UsedName(getCause,[Default]), UsedName(hashCode,[Default]), UsedName(getClass,[Default]), UsedName(getSuppressed,[Default]), UsedName(printStackTrace,[Default]), UsedName(isInstanceOf,[Default]), UsedName(synchronized,[Default]), UsedName(!=,[Default]), UsedName(##,[Default]), UsedName(Object;init;,[Default]), UsedName(setStackTrace,[Default]), UsedName(toString,[Default]), UsedName(==,[Default]), UsedName(getLocalizedMessage,[Default]), UsedName(notifyAll,[Default]), UsedName(getMessage,[Default]), UsedName(clone,[Default]), UsedName(addSuppressed,[Default]), UsedName(Serializable;init;,[Default]), UsedName($asInstanceOf,[Default]), UsedName(NoSolutionException,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(projecteuler.NoSolutionException)[0m
-[0m[[0m[0mdebug[0m] [0m[0m  > [0m
-[0m[[0m[0mdebug[0m] [0m[0m  > [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from projecteuler.SolutionNotImplemented...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: projecteuler.SolutionNotImplemented[0m
-[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(projecteuler.SolutionNotImplemented)[0m
-[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(projecteuler.SolutionNotImplemented,ModifiedNames(changes = UsedName(asInstanceOf,[Default]), UsedName($isInstanceOf,[Default]), UsedName(ne,[Default]), UsedName(finalize,[Default]), UsedName(Throwable;init;,[Default]), UsedName(equals,[Default]), UsedName(fillInStackTrace,[Default]), UsedName(wait,[Default]), UsedName(setCause,[Default]), UsedName(notify,[Default]), UsedName(initCause,[Default]), UsedName(eq,[Default]), UsedName(Exception;init;,[Default]), UsedName(getStackTrace,[Default]), UsedName(getCause,[Default]), UsedName(hashCode,[Default]), UsedName(SolutionNotImplemented;init;,[Default]), UsedName(getClass,[Default]), UsedName(getSuppressed,[Default]), UsedName(printStackTrace,[Default]), UsedName(isInstanceOf,[Default]), UsedName(synchronized,[Default]), UsedName(!=,[Default]), UsedName(##,[Default]), UsedName(SolutionNotImplemented,[Default]), UsedName(Object;init;,[Default]), UsedName(setStackTrace,[Default]), UsedName(toString,[Default]), UsedName(==,[Default]), UsedName(getLocalizedMessage,[Default]), UsedName(notifyAll,[Default]), UsedName(getMessage,[Default]), UsedName(clone,[Default]), UsedName(addSuppressed,[Default]), UsedName(Serializable;init;,[Default]), UsedName($asInstanceOf,[Default]))) invalidates 1 classes due to The projecteuler.SolutionNotImplemented has the following regular definitions changed:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	UsedName(asInstanceOf,[Default]), UsedName($isInstanceOf,[Default]), UsedName(ne,[Default]), UsedName(finalize,[Default]), UsedName(Throwable;init;,[Default]), UsedName(equals,[Default]), UsedName(fillInStackTrace,[Default]), UsedName(wait,[Default]), UsedName(setCause,[Default]), UsedName(notify,[Default]), UsedName(initCause,[Default]), UsedName(eq,[Default]), UsedName(Exception;init;,[Default]), UsedName(getStackTrace,[Default]), UsedName(getCause,[Default]), UsedName(hashCode,[Default]), UsedName(SolutionNotImplemented;init;,[Default]), UsedName(getClass,[Default]), UsedName(getSuppressed,[Default]), UsedName(printStackTrace,[Default]), UsedName(isInstanceOf,[Default]), UsedName(synchronized,[Default]), UsedName(!=,[Default]), UsedName(##,[Default]), UsedName(SolutionNotImplemented,[Default]), UsedName(Object;init;,[Default]), UsedName(setStackTrace,[Default]), UsedName(toString,[Default]), UsedName(==,[Default]), UsedName(getLocalizedMessage,[Default]), UsedName(notifyAll,[Default]), UsedName(getMessage,[Default]), UsedName(clone,[Default]), UsedName(addSuppressed,[Default]), UsedName(Serializable;init;,[Default]), UsedName($asInstanceOf,[Default]).[0m
-[0m[[0m[0mdebug[0m] [0m[0m  > by transitive inheritance: Set(projecteuler.SolutionNotImplemented)[0m
-[0m[[0m[0mdebug[0m] [0m[0m  > [0m
-[0m[[0m[0mdebug[0m] [0m[0m  > [0m
-[0m[[0m[0mdebug[0m] [0m[0m        [0m
-[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: [0m
-[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
-[0m[[0m[0mdebug[0m] [0m[0mFinal step, transitive dependencies:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
-[0m[[0m[0mdebug[0m] [0m[0mNo classes were invalidated.[0m
+[0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())[0m
+[0m[[0m[0mdebug[0m] [0m[0mNo changes[0m

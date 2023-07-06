@@ -859,8 +859,12 @@ def pe(number: Int) = number match
   //     && digits(2 * x).sorted == digs
   // yield x).head
 
-  case 53 => ???
-
+  case 53 =>
+    (for
+      n <- 1 to 100
+      k <- 0 to n
+      if binom(n, k) > 1_000_000
+    yield 1).sum
   case _ => ???
 
 @main def main(args: Int*): Unit =
