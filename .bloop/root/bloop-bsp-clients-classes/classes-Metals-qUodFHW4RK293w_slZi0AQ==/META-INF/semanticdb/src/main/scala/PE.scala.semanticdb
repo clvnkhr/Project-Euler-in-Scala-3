@@ -1,5 +1,5 @@
 
-°§src/main/scala/PE.scala*I
+‡Ásrc/main/scala/PE.scala*I
 %projecteuler/PE$package.pe().(number)*numberÄä"
 
 scala/Int#*%
@@ -967,27 +967,100 @@ scala/Int#*'
 scala/Int#*'
 local298*qÄä"
 
+scala/Int#*Ö
+local299 Ä*primesWithIndexÄä_"]
+[Y$scala/collection/immutable/LazyList#1/scala/Tuple2#
+scala/Int#
+scala/Int#*J
+local300*aÄä5"3
+1/scala/Tuple2#
+scala/Int#
+scala/Int#*J
+local301*bÄä5"3
+1/scala/Tuple2#
+scala/Int#
+scala/Int#*T
+local302 Ä*maxFrom2Ää5"3
+1/scala/Tuple2#
+scala/Int#
+scala/Int#*J
+local303*pÄä5"3
+1/scala/Tuple2#
+scala/Int#
+scala/Int#*J
+local304*aÄä5"3
+1/scala/Tuple2#
+scala/Int#
+scala/Int#*J
+local305*bÄä5"3
+1/scala/Tuple2#
+scala/Int#
+scala/Int#*J
+local306*tÄä5"3
+1/scala/Tuple2#
+scala/Int#
+scala/Int#*Ä
+local307 Ä*
+candidatesÄä_"]
+[Y$scala/collection/immutable/LazyList#1/scala/Tuple2#
+scala/Int#
+scala/Int#*¿
+local308*x$1Ää®"•
+¢üscala/Tuple2#1/scala/Tuple2#
+scala/Int#
+scala/Int#[Y$scala/collection/immutable/LazyList#1/scala/Tuple2#
+scala/Int#
+scala/Int#*P
+local309 Ä*tempÄä5"3
+1/scala/Tuple2#
+scala/Int#
+scala/Int#*é
+local310 Ä*maxFromsÄäo"m
+ki$scala/collection/immutable/LazyList#A?scala/Tuple3#
+scala/Int#
+scala/Int#
 scala/Int#*'
-local299*pÄä"
+local311*pÄä"
 
 scala/Int#*R
-local300 Ä*digsÄä7"5
+local312 Ä*digsÄä7"5
 31scala/collection/immutable/Seq#
 scala/Int#*q
-local301*x$1ÄäZ"X
+local313*x$1ÄäZ"X
 VTscala/Tuple2#
 scala/Int#31scala/collection/immutable/Seq#
 scala/Int#*'
-local302*dÄä"
+local314*dÄä"
 
 scala/Int#*'
-local303*jÄä"
+local315*jÄä"
 
-scala/Int#*)
-local304*x$1Ää"
+scala/Int#*'
+local316*xÄä"
 
-scala/Int#**
-local305 Ä*dÄä"
+scala/Int#*V
+local317 Ä*replacedÄä7"5
+31scala/collection/immutable/Seq#
+scala/Int#*2
+local318 Ä*	candidateÄä"
+
+scala/Int#*R
+local319 Ä*digsÄä7"5
+31scala/collection/immutable/Seq#
+scala/Int#*'
+local320*xÄä"
+
+scala/Int#*'
+local321*dÄä"
+
+scala/Int#*4
+local322 Ä*maxOccDigitÄä"
+
+scala/Int#*'
+local323*jÄä"
+
+scala/Int#*'
+local324*xÄä"
 
 scala/Int#*µ
 projecteuler/PE$package.pe().*peÄäÑÅ'
@@ -1001,12 +1074,12 @@ scala/Int#
 r
 
 scala/Int#*-
-local306*problemÄä"
+local325*problemÄä"
 
 scala/Int#*:
-local307 Ä*eÄä"" 
+local326 Ä*eÄä"" 
 scala/NotImplementedError#*-
-local308*problemÄä"
+local327*problemÄä"
 
 scala/Int#*É
 projecteuler/PE$package.main().*mainj
@@ -4682,143 +4755,389 @@ scala/Int#2
 
 Ö%Ö )+scala/collection/immutable/LazyList#tail().2;
 
-Ö*Ö .+scala/collection/immutable/LazyList#head().2%
+Ö*Ö .+scala/collection/immutable/LazyList#head().2F
 
-®® scala/Predef.`???`().2F
+éé  6projecteuler/numbertheory/Numbertheory$package.primes.2C
 
-¿¿ 6projecteuler/numbertheory/Numbertheory$package.primes.2@
+é!é -3scala/collection/immutable/LazyList#zipWithIndex().2
 
-¿¿ 0scala/collection/immutable/LazyList#dropWhile().2#
+éé local2992
 
-¿¿  scala/Int#`<=`(+3).2
+êê "local2992?
 
-¿¿ local2992H
+ëë /scala/collection/immutable/LazyList#scanLeft().2
 
-¡¡ 8projecteuler/numbertheory/Numbertheory$package.digits().2
+ëë local3002
 
-¡¡ local2992
+ëë local3012
 
-¡¡ 
-local3002
+ë#ë $local3002"
 
-¿¿ local2992
+ë(ë )scala/Int#`+`(+4).2
 
-¡¡ 
-local3002"
+ë*ë +local3012
 
-¬	¬ scala/package.Seq.2:
+ë0ë 1local3012"
 
-¬¬ *scala/collection/IterableOnceOps#exists().2
+ë5ë 6scala/Int#`+`(+4).2@
 
-¬¬ local3022
+ìì 0scala/collection/immutable/LazyList#takeWhile().2"
 
-√√ local30029
+ìì scala/Int#`<`(+3).2=
 
-√√ )scala/collection/IterableOnceOps#count().2#
+îî -scala/collection/immutable/LazyList#filter().2I
 
-√√ scala/Int#`==`(+3).2
+îî 9projecteuler/numbertheory/Numbertheory$package.isPrime().25
 
-√√ local3022"
+ïï %scala/collection/LinearSeqOps#last().2
 
-√√ scala/Int#`>`(+3).2%
+êê local3022
 
-ƒ
-ƒ scala/Boolean#`&&`().2
+öö local2992;
 
-ƒƒ local30029
+öö !+scala/collection/immutable/LazyList#tail().2@
 
-ƒƒ )scala/collection/IterableOnceOps#count().2#
+ö"ö +0scala/collection/immutable/LazyList#takeWhile().2 
 
-ƒƒ scala/Int#`==`(+3).2
+ö.ö 0scala/Tuple2#_1.2"
 
-ƒƒ local3022"
+ö1ö 2scala/Int#`<`(+3).2"
 
-ƒ ƒ !scala/Int#`%`(+3).2#
+ö=ö >scala/Int#`/`(+3).2
 
-ƒ$ƒ &scala/Int#`==`(+3).2%
+ö?ö Glocal3022 
 
-≈
-≈ scala/Boolean#`&&`().2+
+öHö Jscala/Tuple2#_2.2
 
-≈≈ scala/runtime/RichInt#to().29
+öö 	local3032
 
-≈≈ )scala/collection/IterableOnceOps#count().2
+õõ $local2992;
 
-≈≈ local3032I
+úú +scala/collection/immutable/LazyList#drop().2
 
-≈A≈ H9projecteuler/numbertheory/Numbertheory$package.isPrime().2G
+úú local3032?
 
-≈;≈ @7projecteuler/numbertheory/Numbertheory$package.toInt().2
+ûû /scala/collection/immutable/LazyList#scanLeft().2
 
-≈!≈ %local30023
+ûû local3042
 
-≈&≈ )#scala/collection/IterableOps#map().2
+û û !local3052
 
-≈1≈ 2local3052
+û'û (local3042"
 
-≈6≈ 7local3032#
+û,û -scala/Int#`+`(+4).2
 
-≈J≈ Lscala/Int#`>=`(+3).2
+û.û /local3052
 
-«
-« local2992;
+û4û 5local3052"
 
-«« +scala/collection/immutable/LazyList#head().2%
+û9û :scala/Int#`+`(+4).2"
 
-‘‘ scala/Predef.`???`().2+
+û=û >scala/Int#`-`(+3).2
+
+û?û @local3032=
+
+†† -scala/collection/immutable/LazyList#filter().2
+
+†† local3062
+
+†† local3062 
+
+†† scala/Tuple2#_2.2"
+
+†† scala/Int#`>`(+3).2
+
+†† &local3022 
+
+†'† )scala/Tuple2#_2.2%
+
+†*† ,scala/Boolean#`&&`().2
+
+†-† .local3062 
+
+†/† 1scala/Tuple2#_2.2"
+
+†2† 3scala/Int#`%`(+3).2#
+
+†6† 8scala/Int#`!=`(+3).2@
+
+°° 0scala/collection/immutable/LazyList#takeWhile().2"
+
+°° scala/Int#`<`(+3).2=
+
+¢¢ -scala/collection/immutable/LazyList#filter().2I
+
+¢¢ 9projecteuler/numbertheory/Numbertheory$package.isPrime().2
+
+õõ local3072
+
+öö 	local3032
+
+õõ local3072
+
+££ local3072>
+
+££ .scala/collection/immutable/LazyList#isEmpty().2
+
+•• local30725
+
+•• "%scala/collection/LinearSeqOps#last().2
+
+•• local3092
+
+¶	¶ 
+local3032 
+
+¶¶ scala/Tuple2#_1.2
+
+¶¶ local3092 
+
+¶¶ scala/Tuple2#_1.2
+
+¶¶ local3092 
+
+¶¶ scala/Tuple2#_2.2
+
+óó local3102
+
+ß'ß /local3102
+
+ß	ß local3022 
+
+ßß scala/Tuple2#_1.2
+
+ßß local3022 
+
+ßß !scala/Tuple2#_2.29
+
+ß1ß 6)scala/collection/IterableOnceOps#maxBy().2 
+
+ß9ß ;scala/Tuple3#_3.2 
+
+ß=ß ?scala/Tuple3#_2.2F
+
+ΩΩ 6projecteuler/numbertheory/Numbertheory$package.primes.2@
+
+ΩΩ 0scala/collection/immutable/LazyList#dropWhile().2#
+
+ΩΩ  scala/Int#`<=`(+3).2
+
+ΩΩ local3112H
+
+øø 8projecteuler/numbertheory/Numbertheory$package.digits().2
+
+øø local3112
+
+øø 
+local3122
+
+ΩΩ local3112
+
+øø 
+local3122"
+
+¿	¿ scala/package.Seq.2:
+
+¿¿ *scala/collection/IterableOnceOps#exists().2
+
+¿¿ local3142
+
+¡¡ local31229
+
+¡¡ )scala/collection/IterableOnceOps#count().2#
+
+¡¡ scala/Int#`==`(+3).2
+
+¡¡ local3142"
+
+¡¡ scala/Int#`>`(+3).2%
+
+¬
+¬ scala/Boolean#`&&`().2
+
+¬¬ local31229
+
+¬¬ )scala/collection/IterableOnceOps#count().2#
+
+¬¬ scala/Int#`==`(+3).2
+
+¬¬ local3142"
+
+¬ ¬ !scala/Int#`%`(+3).2#
+
+¬$¬ &scala/Int#`==`(+3).2%
+
+√
+√ scala/Boolean#`&&`().2+
+
+√√ scala/runtime/RichInt#to().29
+
+√√ )scala/collection/IterableOnceOps#count().2
+
+√√ local3152
+
+ƒƒ local31223
+
+ƒ ƒ ##scala/collection/IterableOps#map().2
+
+ƒ$ƒ %local3162
+
+ƒ,ƒ -local3162#
+
+ƒ.ƒ 0scala/Int#`==`(+3).2
+
+ƒ1ƒ 2local3142
+
+ƒ8ƒ 9local3152
+
+ƒ?ƒ @local3162
+
+ƒƒ local3172
+
+≈≈ local31724
+
+≈≈ $scala/collection/IterableOps#head().2#
+
+≈≈ scala/Int#`==`(+3).2I
+
+∆ ∆ '9projecteuler/numbertheory/Numbertheory$package.isPrime().2G
+
+∆∆ 7projecteuler/numbertheory/Numbertheory$package.toInt().2
+
+∆∆ local3172#
+
+«« scala/Int#`>=`(+3).2
+
+…
+… local3112;
+
+…… +scala/collection/immutable/LazyList#head().2
+
+ºº local3182(
+
+ÀÀ 
+scala/Predef.assert(+1).2I
+
+ÀÀ 9projecteuler/numbertheory/Numbertheory$package.isPrime().2
+
+ÀÀ local3182H
+
+ÃÃ 8projecteuler/numbertheory/Numbertheory$package.digits().2
+
+ÃÃ local3182
+
+ÃÃ local3192
+
+ÕÕ local31929
+
+ÕÕ  )scala/collection/IterableOnceOps#maxBy().2
+
+Õ!Õ "local3202
+
+Õ&Õ *local31929
+
+Õ+Õ 0)scala/collection/IterableOnceOps#count().2
+
+Õ1Õ 2local3212
+
+Õ6Õ 7local3212#
+
+Õ8Õ :scala/Int#`==`(+3).2
+
+Õ;Õ <local3202
+
+ÕÕ local3222+
+
+œœ 	scala/runtime/RichInt#to().27
+
+–– 
+'scala/collection/immutable/Range#map().2
+
+–– local3232G
+
+—F— K7projecteuler/numbertheory/Numbertheory$package.toInt().2H
+
+—— 8projecteuler/numbertheory/Numbertheory$package.digits().2
+
+—— local31823
+
+—— #scala/collection/IterableOps#map().2
+
+—— local3242
+
+—&— 'local3242#
+
+—(— *scala/Int#`==`(+3).2
+
+—+— 6local3222
+
+—<— =local3232
+
+—C— Dlocal32426
+
+”” &scala/collection/IterableOps#filter().2I
+
+”” 9projecteuler/numbertheory/Numbertheory$package.isPrime().27
+
+‘‘ 
+'scala/collection/IterableOnceOps#min().2%
+
+‚‚ scala/Predef.`???`().2%
+
+‰‰ scala/Predef.`???`().2+
  projecteuler/PE$package.pe().2
 
-÷÷ scala/main#2
+ÊÊ scala/main#2
 
-÷÷ 
+ÊÊ 
 scala/Int#25
 
-÷÷ %projecteuler/PE$package.main().(args)2
+ÊÊ %projecteuler/PE$package.main().(args)2
 
-÷÷  scala/Unit#25
+ÊÊ  scala/Unit#25
 
-◊◊ 	%projecteuler/PE$package.main().(args)21
+ÁÁ 	%projecteuler/PE$package.main().(args)21
 
-◊
-◊ !scala/collection/SeqOps#length().2#
+Á
+Á !scala/collection/SeqOps#length().2#
 
-◊◊ scala/Int#`==`(+3).2F
+ÁÁ scala/Int#`==`(+3).2F
 
-ÿÿ 6projecteuler/numbertheory/Numbertheory$package.from().2>
+ËË 6projecteuler/numbertheory/Numbertheory$package.from().2>
 
-ÿÿ .scala/collection/immutable/LazyList#foreach().2
+ËË .scala/collection/immutable/LazyList#foreach().2
 
-ÿÿ "local30628
+ËË "local32528
 
-ÿ&ÿ ,(projecteuler/util/Util$package.pprint().2
+Ë&Ë ,(projecteuler/util/Util$package.pprint().2
 
-ÿ-ÿ 4local3062-
+Ë-Ë 4local3252-
 
-ÿ6ÿ 8projecteuler/PE$package.pe().2
+Ë6Ë 8projecteuler/PE$package.pe().2
 
-ÿ9ÿ @local3062*
+Ë9Ë @local3252*
 
-ŸŸ %scala/NotImplementedError#2
+ÈÈ %scala/NotImplementedError#2
 
-ŸŸ local30725
+ÈÈ local32625
 
-⁄⁄ %projecteuler/PE$package.main().(args)2;
+ÍÍ %projecteuler/PE$package.main().(args)2;
 
-⁄⁄ +scala/collection/IterableOnceOps#foreach().2
+ÍÍ +scala/collection/IterableOnceOps#foreach().2
 
-⁄⁄ local30828
+ÍÍ local32728
 
-⁄⁄ %(projecteuler/util/Util$package.pprint().2
+ÍÍ %(projecteuler/util/Util$package.pprint().2
 
-⁄&⁄ -local3082-
+Í&Í -local3272-
 
-⁄/⁄ 1projecteuler/PE$package.pe().2
+Í/Í 1projecteuler/PE$package.pe().2
 
-⁄2⁄ 9local3082/
+Í2Í 9local3272/
 
-÷
-÷ projecteuler/PE$package.main().2
- projecteuler/PZ D2F7A50452D47B8BB68A0D3881E319A4b,
+Ê
+Ê projecteuler/PE$package.main().2
+ projecteuler/PZ 2F142BF226E518E57FF2176E6FF3D2A1b,
  < B
 2
 
@@ -7535,35 +7854,240 @@ scala/Int#b>
 2
 
 ˛˛ #
+scala/math/Ordering.Int.bS
+
+êë EBC
+2
+
+êë 1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+ë#ë $iBg
+2:0
+2
+
+ë#ë $
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+ë*ë +iBg
+2:0
+2
+
+ë*ë +
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+ë0ë 1iBg
+2:0
+2
+
+ë0ë 1
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+ìì iBg
+2:0
+2
+
+ìì 
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+îî iBg
+2:0
+2
+
+îî 
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bS
+
+õû EBC
+2
+
+õû 1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+úú iBg
+2:0
+2
+
+úú 
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+û'û (iBg
+2:0
+2
+
+û'û (
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+û.û /iBg
+2:0
+2
+
+û.û /
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+û4û 5iBg
+2:0
+2
+
+û4û 5
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+û?û @iBg
+2:0
+2
+
+û?û @
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+°° iBg
+2:0
+2
+
+°° 
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#bw
+
+¢¢ iBg
+2:0
+2
+
+¢¢ 
+scala/NonEmptyTuple#apply().1/scala/Tuple2#
+scala/Int#
+scala/Int#b0
+
+ßß 6"B 
+2
+
+ßß 6
+scala/Int#bc
+
+ß#ß /UBS
+2
+
+ß#ß /A?scala/Tuple3#
+scala/Int#
+scala/Int#
+scala/Int#b†
+
+ß'ß /ë
+é
+|Bz
+53
+1scala/collection/immutable/LazyList.toDeferrer().A?scala/Tuple3#
+scala/Int#
+scala/Int#
+scala/Int#2
+
+ß'ß /b>
+
+ßß <0
+.
+2
+
+ßß <
 scala/math/Ordering.Int.be
 
-¬	¬ WBU
+¿	¿ WBU
 C:A
 2
 
-¬	¬ /
+¿	¿ /
 -scala/collection/SeqFactory.Delegate#apply().
 scala/Int#bN
 
-≈≈ @
+√√ @
 >
 ,*
 (scala/LowPriorityImplicits#intWrapper().2
 
-≈≈ b0
+√√ b0
 
-≈!≈ )"B 
+ƒƒ #"B 
 2
 
-≈!≈ )
-scala/Int#b1
+ƒƒ #
+scala/Int#b0
 
-ÿÿ #B!
+ÕÕ  "B 
 2
 
-ÿÿ scala/Unit#b1
+ÕÕ  
+scala/Int#b>
 
-⁄⁄ #B!
+ÕÕ >0
+.
 2
 
-⁄⁄ scala/Unit#
+ÕÕ >
+scala/math/Ordering.Int.b0
+
+œ‘ 
+"B 
+2
+
+œ‘ 
+
+scala/Int#b0
+
+œ– 
+"B 
+2
+
+œ– 
+
+scala/Int#bN
+
+œœ @
+>
+,*
+(scala/LowPriorityImplicits#intWrapper().2
+
+œœ b0
+
+—— "B 
+2
+
+—— 
+scala/Int#b>
+
+œ‘ 
+0
+.
+2
+
+œ‘ 
+
+scala/math/Ordering.Int.b1
+
+ËË #B!
+2
+
+ËË scala/Unit#b1
+
+ÍÍ #B!
+2
+
+ÍÍ scala/Unit#
