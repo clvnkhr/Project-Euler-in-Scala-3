@@ -332,13 +332,6 @@ def pe(number: Int) = number match
         a <- (-999 to 999 by 2)
       yield (a, b, numPrimesFromZero(a, b))
     ).maxBy((_, _, c) => c)
-    // (for
-    //   b <- primes.takeWhile(_ < 1000).toVector
-    //   a <- (-999 to 999 by 2)
-    // yield (a, b, numPrimesFromZero(a, b)))
-    //   .filter { case (_, _, c) => c > 5 }
-    //   .foreach(println)
-    print(s"(aMax, bMax)=($aMax, $bMax)")
     aMax * bMax
 
   case 28 =>
@@ -812,7 +805,7 @@ def pe(number: Int) = number match
     // to get 8 primes, we cannot replace the last digit: the last digit cannot be 0,2,4,5,6,8. It must be one of 1,3,7,9.
     //
     // INFO:
-    // go through primes and change their repeating digits?
+    // go through primes and change their repeating digits
     // if we cycle through 8 single digits, 1,2,3,4,5,6,7,8,9,0, one of them will be divisible by 3. See the possible digit sums mod 3:
     // ...                                  0,1,2,0,1,2,0,1,2,0, 4 numbers div by 3,
     // ...                                  1,2,0,1,2,0,1,2,0,1, 3                3,
@@ -831,6 +824,8 @@ def pe(number: Int) = number match
       // given 56003 only works for <8 digits in the question body.
       digs = digits(p)
       if Seq(0, 2, 4).exists(d =>
+        // I guess we are assuming that we have only one set of repeating digits
+        // i.e. we are ignoring numbers like 222777 which could be prime
         digs.count(_ == d) > 0
           && digs.count(_ == d) % 3 == 0
           && (0 to 9).count(j =>
@@ -843,7 +838,7 @@ def pe(number: Int) = number match
 
     assert(candidate.isPrime)
     val digs = digits(candidate)
-    val maxOccDigit = digs.maxBy(x => digs.count(d => d == x))
+    val maxOccDigit = digs.maxBy(x => digs.count(_ == x))
 
     (0 to 9)
       .map(j =>
@@ -853,7 +848,7 @@ def pe(number: Int) = number match
       .min
 
   case 52 => 142857
-  // INFO: brute force follows below. But the answer is simply the repeating fragment of 1/7.
+  // INFO: brute force solution is below. But the answer is simply the repeating fragment of 1/7.
   // (for
   //   x <- (100_000 until 1_000_000 / 6).to(LazyList)
   //   digs = digits(x).sorted
