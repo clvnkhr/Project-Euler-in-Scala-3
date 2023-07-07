@@ -1,5 +1,5 @@
 
-·Ïsrc/main/scala/PE.scala*I
+í–src/main/scala/PE.scala*I
 %projecteuler/PE$package.pe().(number)*numberÄä"
 
 scala/Int#*%
@@ -1065,7 +1065,381 @@ scala/Int#*'
 scala/Int#*'
 local325*kÄä"
 
-scala/Int#*µ
+scala/Int#*m
+local326 îÄ*SuitÄäL
+Jjava/lang/Object#scala/reflect/Enum#
+local326"
+
+local327í: *4
+local328 Äâ*DiamondÄä"
+
+local326í: *1
+local329 Äâ*ClubÄä"
+
+local326í: *2
+local330 Äâ*HeartÄä"
+
+local326í: *2
+local331 Äâ*SpadeÄä"
+
+local326í: *E
+local332 Ä*$valuesÄä"" 
+scala/Array#
+local326í *E
+local333*valuesÄä&"$
+"j 
+scala/Array#
+local326í: *2
+local334*$nameÄä"
+java/lang/String#*<
+local335*valueOfÄä
+
+local334
+local326í: */
+local336*	_$ordinalÄä"
+
+scala/Int#*J
+local337*$newÄä-+
+local336
+local337($name)
+local326í *-
+local338*ordinalÄä"
+
+scala/Int#*@
+local339*fromOrdinalÄä
+
+local338
+local326í: *Ø
+local340
+ *SuitÄäè
+åjava/lang/Object#¢
+local341"d
+local327
+local328
+local329
+local330
+local331
+local332
+local333
+local335
+local337
+local339í: *B
+local342*CardValÄä" 
+scala/Int#
+scala/Int#í: *-
+local343 Ä*jackÄä"
+
+scala/Int#*.
+local344 Ä*queenÄä"
+
+scala/Int#*-
+local345 Ä*kingÄä"
+
+scala/Int#*,
+local346 Ä*aceÄä"
+
+scala/Int#*3
+local347 Ä*cardValÄä"
+
+local342í: *0
+local348 Ä*suitÄä"
+
+local326í: *R
+local349*copyÄä53#
+local349(cardVal)
+local349(suit)
+local350í: *t
+local351*copy$default$1ÄäM"K
+IjG
+EBC
+
+local3423
+1/-scala/annotation/unchecked/uncheckedVariance#í: *t
+local352*copy$default$2ÄäM"K
+IjG
+EBC
+
+local3263
+1/-scala/annotation/unchecked/uncheckedVariance#í: */
+local353*_1Ää"
+j
+
+local342í: */
+local354*_2Ää"
+j
+
+local326í: * 
+local350 Ä*CardÄä©
+¶java/lang/Object#scala/Product#java/io/Serializable#
+local350"P
+local347
+local348
+local355
+local349
+local351
+local352
+local353
+local354í: *S
+local356*applyÄä53#
+local356(cardVal)
+local356(suit)
+local350í: *'
+local357*x$1Ää"
+
+local350*<
+local358*unapplyÄä
+
+local357
+local350í: *V
+local359*toStringÄä"
+j
+java/lang/String#í: öscala/Any#toString().*q
+local360
+ *CardÄäR
+Pjava/lang/Object#¢
+local361"(
+local362
+local356
+local358
+local359í: *&
+local363*s1Ää"
+
+local326*&
+local364*s2Ää"
+
+local326*ã
+local365*compareÄä(&
+local363
+local364
+scala/Int#í: öscala/math/Ordering#compare().öjava/util/Comparator#compare().*ä
+local366
+ ®Ä*ordSuitÄäf
+djava/lang/Object#&$scala/math/Ordering#
+local326¢
+local367"
+local368
+local365í: *&
+local369*c1Ää"
+
+local350*&
+local370*c2Ää"
+
+local350*)
+local371 Ä*v1Ää"
+
+local342*)
+local372 Ä*s1Ää"
+
+local326*)
+local373 Ä*v2Ää"
+
+local342*)
+local374 Ä*s2Ää"
+
+local326*ã
+local375*compareÄä(&
+local369
+local370
+scala/Int#í: öscala/math/Ordering#compare().öjava/util/Comparator#compare().*ä
+local376
+ ®Ä*ordCardÄäf
+djava/lang/Object#&$scala/math/Ordering#
+local350¢
+local377"
+local378
+local375í: *q
+local379 îÄ*HandTypeÄäL
+Jjava/lang/Object#scala/reflect/Enum#
+local379"
+
+local380í: *5
+local381 Äâ*HighCardÄä"
+
+local379í: *4
+local382 Äâ*OnePairÄä"
+
+local379í: *5
+local383 Äâ*TwoPairsÄä"
+
+local379í: *9
+local384 Äâ*ThreeOfAKindÄä"
+
+local379í: *5
+local385 Äâ*StraightÄä"
+
+local379í: *2
+local386 Äâ*FlushÄä"
+
+local379í: *6
+local387 Äâ*	FullHouseÄä"
+
+local379í: *8
+local388 Äâ*FourOfAKindÄä"
+
+local379í: *:
+local389 Äâ*StraightFlushÄä"
+
+local379í: *E
+local390 Ä*$valuesÄä"" 
+scala/Array#
+local379í *E
+local391*valuesÄä&"$
+"j 
+scala/Array#
+local379í: *2
+local392*$nameÄä"
+java/lang/String#*<
+local393*valueOfÄä
+
+local392
+local379í: */
+local394*	_$ordinalÄä"
+
+scala/Int#*J
+local395*$newÄä-+
+local394
+local395($name)
+local379í *-
+local396*ordinalÄä"
+
+scala/Int#*@
+local397*fromOrdinalÄä
+
+local396
+local379í: *Ê
+local398
+ *HandTypeÄä¬
+øjava/lang/Object#¢
+local399"ñ
+local380
+local381
+local382
+local383
+local384
+local385
+local386
+local387
+local388
+local389
+local390
+local391
+local393
+local395
+local397í: *4
+local400 Ä*handTypeÄä"
+
+local379í: *H
+local401 Ä*	valueCardÄä#"!
+scala/Option#
+local350í: *4
+local402 Ä*highCardÄä"
+
+local350í: *l
+local403*copyÄäOM=
+local403(handType)
+local403(valueCard)
+local403(highCard)
+local404í: *t
+local405*copy$default$1ÄäM"K
+IjG
+EBC
+
+local3793
+1/-scala/annotation/unchecked/uncheckedVariance#í: *á
+local406*copy$default$2Ää`"^
+\jZ
+XBV
+scala/Option#
+local3503
+1/-scala/annotation/unchecked/uncheckedVariance#í: *t
+local407*copy$default$3ÄäM"K
+IjG
+EBC
+
+local3503
+1/-scala/annotation/unchecked/uncheckedVariance#í: */
+local408*_1Ää"
+j
+
+local379í: *B
+local409*_2Ää'"%
+#j!
+scala/Option#
+local350í: */
+local410*_3Ää"
+j
+
+local350í: *Ë
+local404 Ä*HandÄä«
+ƒjava/lang/Object#scala/Product#java/io/Serializable#
+local404"n
+local400
+local401
+local402
+local411
+local403
+local405
+local406
+local407
+local408
+local409
+local410í: *m
+local412*applyÄäOM=
+local412(handType)
+local412(valueCard)
+local412(highCard)
+local404í: *'
+local413*x$1Ää"
+
+local404*<
+local414*unapplyÄä
+
+local413
+local404í: *V
+local415*toStringÄä"
+j
+java/lang/String#í: öscala/Any#toString().*q
+local416
+ *HandÄäR
+Pjava/lang/Object#¢
+local417"(
+local418
+local412
+local414
+local415í: *(
+local419*cÄä"
+scala/Char#*:
+local420*
+charToSuitÄä
+
+local419
+local326*(
+local421*cÄä"
+scala/Char#*+
+local422 Ä*xÄä"
+scala/Char#*+
+local423 Ä*xÄä"
+scala/Char#*+
+local424 Ä*xÄä"
+scala/Char#*+
+local425 Ä*xÄä"
+scala/Char#*+
+local426 Ä*xÄä"
+scala/Char#*+
+local427 Ä*xÄä"
+scala/Char#*;
+local428*charToValueÄä
+
+local421
+local342*3
+local429*strÄä"
+scala/Predef.String#*6
+local430 Ä*strÄä"
+scala/Predef.String#*>
+local431*charPairToCardÄä
+
+local430
+local350*µ
 projecteuler/PE$package.pe().*peÄäÑÅ'
 %projecteuler/PE$package.pe().(number)VíS
 
@@ -1077,12 +1451,12 @@ scala/Int#
 r
 
 scala/Int#*-
-local326*problemÄä"
+local432*problemÄä"
 
 scala/Int#*:
-local327 Ä*eÄä"" 
+local433 Ä*eÄä"" 
 scala/NotImplementedError#*-
-local328*problemÄä"
+local434*problemÄä"
 
 scala/Int#*É
 projecteuler/PE$package.main().*mainj
@@ -1096,7 +1470,41 @@ scala/Int#*É
 projecteuler/main# *mainÄäm
 kjava/lang/Object#projecteuler/main#":
 projecteuler/main#`<init>`().
-projecteuler/main#main().í: 2
+projecteuler/main#main().í: *9
+local395($name)*$nameÄä"
+java/lang/String#*6
+local403(handType)*handTypeÄä"
+
+local379*K
+local412(valueCard)*	valueCardÄä#"!
+scala/Option#
+local350*4
+local349(cardVal)*cardValÄä"
+
+local342*.
+local349(suit)*suitÄä"
+
+local326*6
+local412(handType)*handTypeÄä"
+
+local379*6
+local412(highCard)*highCardÄä"
+
+local350*.
+local356(suit)*suitÄä"
+
+local326*4
+local356(cardVal)*cardValÄä"
+
+local342*9
+local337($name)*$nameÄä"
+java/lang/String#*K
+local403(valueCard)*	valueCardÄä#"!
+scala/Option#
+local350*6
+local403(highCard)*highCardÄä"
+
+local3502
  projecteuler/2 
  projecteuler/util/2
  projecteuler/2(
@@ -5091,62 +5499,386 @@ scala/Int#2
 
 ·· scala/math/Ordered#`>`().27
 
-‚‚ 'scala/collection/IterableOnceOps#sum().2%
+‚‚ 'scala/collection/IterableOnceOps#sum().2
 
-„„ scala/Predef.`???`().2+
+‰	‰ local3262
+
+ÂÂ local3282
+
+ÂÂ local3292
+
+ÂÂ local3302
+
+Â!Â &local3312
+
+ÁÁ 
+scala/Int#2
+
+Á	Á local3422
+
+Ë#Ë *local3422
+
+Ë,Ë 3local3422
+
+Ë5Ë <local3422
+
+Ë>Ë Elocal3422
+
+Ë	Ë local3432
+
+ËË local3442
+
+ËË local3452
+
+ËË local3462
+
+ÎÎ $local3422
+
+ÎÎ local3472
+
+Î,Î 0local3262
+
+Î&Î *local3482
+
+ÎÎ local3502'
+
+ÌÌ scala/package.Ordering#2
+
+ÌÌ  local3262
+
+ÓÓ local3262
+
+ÓÓ local3632
+
+Ó Ó $local3262
+
+ÓÓ local3642
+
+Ó'Ó *
+scala/Int#2
+
+Ó-Ó /local3632-
+
+Ó0Ó 7scala/reflect/Enum#ordinal().25
+
+Ó8Ó ?%scala/runtime/OrderedProxy#compare().2
+
+Ó@Ó Blocal3642-
+
+ÓCÓ Jscala/reflect/Enum#ordinal().2
+
+Ó
+Ó local3652
+
+Ì
+Ì local3662
+
+ local3412
+
+ÒÒ scala/math/2#
+
+ÒÒ scala/math/Ordered.27
+
+ÒÒ )'scala/math/Ordered.orderingToOrdered().2(
+
+ÛÛ 
+scala/Predef.assert(+1).2
+
+ÛÛ local3282)
+
+ÛÛ scala/math/Ordered#`<`().2
+
+ÛÛ local3302'
+
+ıı scala/package.Ordering#2
+
+ıı  local3502
+
+ˆˆ local3502
+
+ˆˆ local3692
+
+ˆ ˆ $local3502
+
+ˆˆ local3702
+
+ˆ'ˆ *
+scala/Int#2
+
+ˆ.ˆ 0local3692
+
+ˆ2ˆ 4local3702
+
+˜˜ local3612
+
+˜˜ local3712
+
+˜˜ local3722
+
+˜˜  local3612
+
+˜!˜ #local3732
+
+˜%˜ 'local3742
+
+¯¯ local3712#
+
+¯¯ scala/Int#`!=`(+3).2
+
+¯¯ local3732
+
+¯¯ local3712-
+
+¯¯ %scala/math/Ordered#compare().2
+
+¯&¯ (local3732
+
+¯/¯ 6local3672
+
+¯7¯ >local3652
+
+¯?¯ Alocal3722
+
+¯C¯ Elocal3742
+
+ˆ
+ˆ local3752
+
+ı
+ı local3762(
+
+˘˘ 
+scala/Predef.assert(+1).2
+
+˘˘ local3612
+
+˘˘ local3432
+
+˘˘ local3282)
+
+˘˘  scala/math/Ordered#`>`().2
+
+˘!˘ %local3612
+
+˘)˘ .local3312
+
+˚	˚ local3792
+
+¸¸ local3812
+
+¸¸ local3822
+
+¸¸ &local3832
+
+¸(¸ 4local3842
+
+¸6¸ >local3852
+
+¸@¸ Elocal3862
+
+˝˝ local3872
+
+˝˝ local3882
+
+˝ ˝ -local3892
+
+ˇˇ &local3792
+
+ˇˇ local4002
+
+ˇ(ˇ 1local4012
+
+ˇKˇ Olocal3502
+
+ˇAˇ Ilocal4022
+
+ˇˇ local4042
+
+ÅÅ scala/Char#2
+
+ÅÅ local4192
+
+ÅÅ !local3262
+
+Å$Å %local4192
+
+ÇÇ local3282
+
+ÉÉ local3292
+
+ÑÑ local3302
+
+ÖÖ local3312(
+
+ÜÜ %scala/package.Exception#2
+
+ÅÅ local4202
+
+àà scala/Char#2
+
+àà local4212
+
+àà %local3422
+
+à(à )local4212
+
+ââ local4222
+
+ââ local4222#
+
+ââ scala/Char#toInt().2#
+
+ââ scala/Int#`>=`(+3).2#
+
+ââ $scala/Char#toInt().2%
+
+â%â 'scala/Boolean#`&&`().2
+
+â(â )local4222#
+
+â*â /scala/Char#toInt().2#
+
+â0â 2scala/Int#`<=`(+3).2#
+
+â7â <scala/Char#toInt().2
+
+ää 	local4222#
+
+ä
+ä scala/Char#toInt().2"
+
+ää scala/Int#`-`(+3).2#
+
+ää scala/Char#toInt().2
+
+ãã local4232
+
+ãã local4232$
+
+ãã scala/Char#`==`(+2).2
+
+åå local4242
+
+åå local4242$
+
+åå scala/Char#`==`(+2).2
+
+åå  local3432
+
+çç local4252
+
+çç local4252$
+
+çç scala/Char#`==`(+2).2
+
+çç !local3442
+
+éé local4262
+
+éé local4262$
+
+éé scala/Char#`==`(+2).2
+
+éé  local3452
+
+èè local4272
+
+èè local4272$
+
+èè scala/Char#`==`(+2).2
+
+èè local3462(
+
+ê&ê /scala/package.Exception#2
+
+àà local4282$
+
+íí "scala/Predef.String#2
+
+íí local4292
+
+í%í )local3502
+
+í,í /local4292
+
+ìì local4302
+
+ìì local4302*
+
+ìì java/lang/String#length().2#
+
+ìì scala/Int#`==`(+3).2
+
+îî local3612
+
+îî local4282
+
+îî local4302
+
+î"î ,local4202
+
+î-î 0local4302(
+
+ïï #scala/package.Exception#2
+
+íí local4312%
+
+ññ scala/Predef.`???`().2%
+
+òò scala/Predef.`???`().2+
  projecteuler/PE$package.pe().2
 
-ÂÂ scala/main#2
+öö scala/main#2
 
-ÂÂ 
+öö 
 scala/Int#25
 
-ÂÂ %projecteuler/PE$package.main().(args)2
+öö %projecteuler/PE$package.main().(args)2
 
-ÂÂ  scala/Unit#25
+öö  scala/Unit#25
 
-ÊÊ 	%projecteuler/PE$package.main().(args)21
+õõ 	%projecteuler/PE$package.main().(args)21
 
-Ê
-Ê !scala/collection/SeqOps#length().2#
+õ
+õ !scala/collection/SeqOps#length().2#
 
-ÊÊ scala/Int#`==`(+3).2F
+õõ scala/Int#`==`(+3).2F
 
-ÁÁ 6projecteuler/numbertheory/Numbertheory$package.from().2>
+úú 6projecteuler/numbertheory/Numbertheory$package.from().2>
 
-ÁÁ .scala/collection/immutable/LazyList#foreach().2
+úú .scala/collection/immutable/LazyList#foreach().2
 
-ÁÁ "local32628
+úú "local43228
 
-Á&Á ,(projecteuler/util/Util$package.pprint().2
+ú&ú ,(projecteuler/util/Util$package.pprint().2
 
-Á-Á 4local3262-
+ú-ú 4local4322-
 
-Á6Á 8projecteuler/PE$package.pe().2
+ú6ú 8projecteuler/PE$package.pe().2
 
-Á9Á @local3262*
+ú9ú @local4322*
 
-ËË %scala/NotImplementedError#2
+ùù %scala/NotImplementedError#2
 
-ËË local32725
+ùù local43325
 
-ÈÈ %projecteuler/PE$package.main().(args)2;
+ûû %projecteuler/PE$package.main().(args)2;
 
-ÈÈ +scala/collection/IterableOnceOps#foreach().2
+ûû +scala/collection/IterableOnceOps#foreach().2
 
-ÈÈ local32828
+ûû local43428
 
-ÈÈ %(projecteuler/util/Util$package.pprint().2
+ûû %(projecteuler/util/Util$package.pprint().2
 
-È&È -local3282-
+û&û -local4342-
 
-È/È 1projecteuler/PE$package.pe().2
+û/û 1projecteuler/PE$package.pe().2
 
-È2È 9local3282/
+û2û 9local4342/
 
-Â
-Â projecteuler/PE$package.main().2
- projecteuler/PZ 8825DF1836C5A8144AB9FAF96C765785b,
+ö
+ö projecteuler/PE$package.main().2
+ projecteuler/PZ B122128443E392E24526F9878ADCC58Ab,
  < B
 2
 
@@ -8132,14 +8864,85 @@ scala/Int#bN
 2
 
 ﬁ‚ %#
-!scala/math/Numeric.IntIsIntegral.b1
+!scala/math/Numeric.IntIsIntegral.bN
 
-ÁÁ #B!
+Ó-Ó 7@
+>
+,*
+(scala/LowPriorityImplicits#intWrapper().2
+
+Ó-Ó 7b_
+
+ÛÛ Q
+O
+=B;
++)
+'scala/math/Ordered.orderingToOrdered().
+local3262
+
+ÛÛ b.
+
+ÛÛ  
+
 2
 
-ÁÁ scala/Unit#b1
+ÛÛ 
 
-ÈÈ #B!
+local367b_
+
+¯¯ Q
+O
+=B;
++)
+'scala/math/Ordered.orderingToOrdered().
+local3422
+
+¯¯ b>
+
+¯¯ 0
+.
 2
 
-ÈÈ scala/Unit#
+¯¯ 
+scala/math/Ordering.Int.b_
+
+˘˘ Q
+O
+=B;
++)
+'scala/math/Ordered.orderingToOrdered().
+local3502
+
+˘˘ b.
+
+˘˘  
+
+2
+
+˘˘ 
+
+local377bC
+
+îî 5
+3
+!
+scala/Predef.augmentString().2
+
+îî bC
+
+î-î 05
+3
+!
+scala/Predef.augmentString().2
+
+î-î 0b1
+
+úú #B!
+2
+
+úú scala/Unit#b1
+
+ûû #B!
+2
+
+ûû scala/Unit#

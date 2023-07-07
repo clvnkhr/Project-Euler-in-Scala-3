@@ -865,6 +865,59 @@ def pe(number: Int) = number match
       k <- 0 to n
       if binom(n, k) > 1_000_000
     yield 1).sum
+  case 54 =>
+    enum Suit:
+      case Diamond, Club, Heart, Spade
+
+    type CardVal = Int
+    val (jack, queen, king, ace): (CardVal, CardVal, CardVal, CardVal) =
+      (11, 12, 13, 14)
+
+    case class Card(cardVal: CardVal, suit: Suit)
+
+    given ordSuit: Ordering[Suit] with
+      def compare(s1: Suit, s2: Suit): Int = s1.ordinal.compare(s2.ordinal)
+
+    import Suit._
+    import math.Ordered.orderingToOrdered
+
+    assert(Diamond < Heart)
+
+    given ordCard: Ordering[Card] with
+      def compare(c1: Card, c2: Card): Int = (c1, c2) match
+        case (Card(v1, s1), Card(v2, s2)) =>
+          if v1 != v2 then v1.compare(v2) else ordSuit.compare(s1, s2)
+    assert(Card(jack, Diamond) > Card(5, Spade))
+
+    enum HandType:
+      case HighCard, OnePair, TwoPairs, ThreeOfAKind, Straight, Flush,
+        FullHouse, FourOfAKind, StraightFlush
+
+    case class Hand(handType: HandType, valueCard: Option[Card], highCard: Card)
+
+    def charToSuit(c: Char): Suit = c match
+      case 'D' => Diamond
+      case 'C' => Club
+      case 'H' => Heart
+      case 'S' => Spade
+      case _   => throw new Exception("not a valid suit")
+
+    def charToValue(c: Char): CardVal = c match
+      case x if x.toInt >= '2'.toInt && x.toInt <= '9'.toInt =>
+        x.toInt - '0'.toInt
+      case x if x == 'T' => 10
+      case x if x == 'J' => jack
+      case x if x == 'Q' => queen
+      case x if x == 'K' => king
+      case x if x == 'A' => ace
+      case _             => throw new Exception("not a valid card")
+
+    def charPairToCard(str: String): Card = str match
+      case str if str.length == 2 =>
+        Card(charToValue(str(0)), charToSuit(str(1)))
+      case _ => throw new Exception("not a pair")
+    ???
+
   case _ => ???
 
 @main def main(args: Int*): Unit =
