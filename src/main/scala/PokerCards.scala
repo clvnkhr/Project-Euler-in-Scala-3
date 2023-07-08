@@ -37,6 +37,7 @@ given ordCard: Ordering[Card] with
   def compare(c1: Card, c2: Card): Int = (c1, c2) match
     case (Card(v1, s1), Card(v2, s2)) =>
       if v1 != v2 then v1.compare(v2) else ordSuit.compare(s1, s2)
+
 // assert(Card(jack, Diamond) > Card(5, Spade))
 
 enum HandType:
