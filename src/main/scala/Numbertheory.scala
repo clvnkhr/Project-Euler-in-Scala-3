@@ -42,7 +42,7 @@ extension (p: Long)
   def isTri: Boolean =
     // if p = n(n+1)/2 then 2p = n**2 + n, so
     // n = -1/2 ± sqrt(1 + 8p)/2. Take the positive number
-    val s = math.sqrt(8 * p + 1)
+    val s = math.sqrt(8 * p + 1.toDouble)
     s.isWhole && (s.toLong - 1) % 2 == 0
 
   /** check if the Long is a pentagonal number, i.e. a number of the form
@@ -53,7 +53,7 @@ extension (p: Long)
     */
   def isPent: Boolean =
     // A pentagonal number is a number of the form n(3n-1)/2.
-    val s = math.sqrt(24 * p + 1)
+    val s = math.sqrt(24 * p + 1.toDouble)
     s.isWhole && (s.toLong + 1) % 6 == 0
 
 /** A slightly faster than normal lazylist of primes computed by trial division.
