@@ -1,5 +1,5 @@
 
-ƒÿ!src/main/scala/ProjectEuler.scala*S
+χω!src/main/scala/ProjectEuler.scala*S
 /projecteuler/ProjectEuler$package.pe().(number)*number€"
 
 scala/Int#*%
@@ -5086,95 +5086,72 @@ scala/Int#2
 
 ξ7ξ ;projecteuler/pokercards/Card#2
 
-ξ-ξ /local3262)
+ξ-ξ /local3262D
 
-οο scala/Predef.println(+1).2(
+ς	ς 4projecteuler/pokercards/PokerCards$package.toHand().2
 
-ρ	ρ 
-scala/StringContext#s().2D
+ςς local3252)
 
-οο 4projecteuler/pokercards/PokerCards$package.toHand().2
+ςς scala/math/Ordered#`>`().2D
 
-οο local3252D
+ςς 4projecteuler/pokercards/PokerCards$package.toHand().2
 
-ο%ο +4projecteuler/pokercards/PokerCards$package.toHand().2
+ςς local3262%
 
-ο"ο $local3262D
-
-ππ 4projecteuler/pokercards/PokerCards$package.toHand().2
-
-ππ local3252)
-
-ππ scala/math/Ordered#`>`().2D
-
-ππ "4projecteuler/pokercards/PokerCards$package.toHand().2
-
-ππ local3262D
-
-σ	σ 4projecteuler/pokercards/PokerCards$package.toHand().2
-
-σσ local3252)
-
-σσ scala/math/Ordered#`>`().2D
-
-σσ 4projecteuler/pokercards/PokerCards$package.toHand().2
-
-σσ local3262%
-
-φφ scala/Predef.`???`().25
+υυ scala/Predef.`???`().25
  'projecteuler/ProjectEuler$package.pe().2
 
-ψψ scala/main#2
+χχ scala/main#2
 
-ψψ 
+χχ 
 scala/Int#2?
 
-ψψ /projecteuler/ProjectEuler$package.main().(args)2
+χχ /projecteuler/ProjectEuler$package.main().(args)2
 
-ψψ  scala/Unit#2?
+χχ  scala/Unit#2?
 
-ωω 	/projecteuler/ProjectEuler$package.main().(args)21
-
-ω
-ω !scala/collection/SeqOps#length().2#
-
-ωω scala/Int#`==`(+3).2F
-
-ϊϊ 6projecteuler/numbertheory/NumberTheory$package.from().2>
-
-ϊϊ .scala/collection/immutable/LazyList#foreach().2
-
-ϊϊ "local32728
-
-ϊ&ϊ ,(projecteuler/util/Util$package.pprint().2
-
-ϊ-ϊ 4local32727
-
-ϊ6ϊ 8'projecteuler/ProjectEuler$package.pe().2
-
-ϊ9ϊ @local3272*
-
-ϋϋ %scala/NotImplementedError#2
-
-ϋϋ local3282?
-
-όό /projecteuler/ProjectEuler$package.main().(args)2;
-
-όό +scala/collection/IterableOnceOps#foreach().2
-
-όό local32928
-
-όό %(projecteuler/util/Util$package.pprint().2
-
-ό&ό -local32927
-
-ό/ό 1'projecteuler/ProjectEuler$package.pe().2
-
-ό2ό 9local32929
+ψψ 	/projecteuler/ProjectEuler$package.main().(args)21
 
 ψ
-ψ )projecteuler/ProjectEuler$package.main().2
- projecteuler/PZ F1AB7522320F28C12737E345ABCD16A5b,
+ψ !scala/collection/SeqOps#length().2#
+
+ψψ scala/Int#`==`(+3).2F
+
+ωω 6projecteuler/numbertheory/NumberTheory$package.from().2>
+
+ωω .scala/collection/immutable/LazyList#foreach().2
+
+ωω "local32728
+
+ω&ω ,(projecteuler/util/Util$package.pprint().2
+
+ω-ω 4local32727
+
+ω6ω 8'projecteuler/ProjectEuler$package.pe().2
+
+ω9ω @local3272*
+
+ϊϊ %scala/NotImplementedError#2
+
+ϊϊ local3282?
+
+ϋϋ /projecteuler/ProjectEuler$package.main().(args)2;
+
+ϋϋ +scala/collection/IterableOnceOps#foreach().2
+
+ϋϋ local32928
+
+ϋϋ %(projecteuler/util/Util$package.pprint().2
+
+ϋ&ϋ -local32927
+
+ϋ/ϋ 1'projecteuler/ProjectEuler$package.pe().2
+
+ϋ2ϋ 9local32929
+
+χ
+χ )projecteuler/ProjectEuler$package.main().2
+ projecteuler/PZ DA263289BF2FC48461B090291FDDDA01b,
  < B
 2
 
@@ -8168,7 +8145,14 @@ FBD
 scala/Predef.refArrayOps().!projecteuler/pokercards/Card#2
 
 θ
-ι b\
+ι bC
+
+θ
+ι 5B3
+2
+
+θ
+ι !projecteuler/pokercards/Card#b\
 
 θ
 θ N
@@ -8189,42 +8173,27 @@ L
 θ
 θ bt
 
-ππ f
+ςς f
 d
 RBP
 +)
 'scala/math/Ordered.orderingToOrdered().!projecteuler/pokercards/Hand#2
 
-ππ bY
+ςς bY
 
-ππ K
+ςς K
 I
 2
 
-ππ 75
-3projecteuler/pokercards/PokerCards$package.ordHand.bt
-
-σσ f
-d
-RBP
-+)
-'scala/math/Ordered.orderingToOrdered().!projecteuler/pokercards/Hand#2
-
-σσ bY
-
-σσ K
-I
-2
-
-σσ 75
+ςς 75
 3projecteuler/pokercards/PokerCards$package.ordHand.b1
 
-ϊϊ #B!
+ωω #B!
 2
 
-ϊϊ scala/Unit#b1
+ωω scala/Unit#b1
 
-όό #B!
+ϋϋ #B!
 2
 
-όό scala/Unit#
+ϋϋ scala/Unit#

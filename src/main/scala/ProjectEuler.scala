@@ -877,10 +877,9 @@ def pe(number: Int) = number match
     )
 
     handPairs.count { case (h1: Array[Card], h2: Array[Card]) =>
-      println(s"${h1.toHand} vs ${h2.toHand}: h1 ${
-          if h1.toHand > h2.toHand then "wins" else "loses"
-        }")
-
+      // println(s"${h1.toHand} vs ${h2.toHand}: h1 ${
+      //     if h1.toHand > h2.toHand then "wins" else "loses"
+      //   }")
       h1.toHand > h2.toHand
     }
 
