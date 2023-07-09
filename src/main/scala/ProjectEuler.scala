@@ -882,11 +882,11 @@ def pe(number: Int) = number match
           if triesRemaining == 0 then false
           else res.isNotLychrel(triesRemaining - 1)
         }
-      def isLychrel: Boolean = isNotLychrel(50)
+      def isLychrel: Boolean = !isNotLychrel(50)
     (1 until 10_000).count(_.isLychrel)
 
   case 56 =>
-    var max: Int = 0
+    var max = 0
     for
       i <- 1 to 100
       j <- 1 to 100
