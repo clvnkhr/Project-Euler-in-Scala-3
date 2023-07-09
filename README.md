@@ -1,6 +1,6 @@
 # Project Euler in Scala 3
 
-Solutions to the first 54 Project Euler problems in Scala 3
+Solutions to the first 57 Project Euler problems in Scala 3
 
 ## Usage
 

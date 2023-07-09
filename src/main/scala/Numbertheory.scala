@@ -100,6 +100,7 @@ extension (n: BigInt)
   def isPalindrome: Boolean =
     val str = n.toString
     str == str.reverse
+  def numDigits: Int = { if n < 0 then -n else n }.toString.length
 
 /** not so naive version of the integer power function, pow(n,power) := n^power.
   * Repeated squaring means that the number of multiplications is logarithmic in
@@ -259,8 +260,11 @@ def totient(n: BigInt): BigInt =
     * @return
     */
 def gcd(a: BigInt, b: BigInt): BigInt =
-  val (q, r) = a /% b
-  if r == 0 then b else gcd(b, r)
+  if a < 0 then gcd(-a, b)
+  else if b < 0 then gcd(a, -b)
+  else
+    val (q, r) = a /% b
+    if r == 0 then b else gcd(b, r)
 
 // TODO: https://en.wikipedia.org/wiki/Extended_Euclidean_algorithm
 
@@ -291,11 +295,65 @@ extension (xs: Seq[Int])
     @annotation.tailrec
     def toInt1(ys: Seq[Int], acc: BigInt): BigInt =
       if ys.isEmpty then acc
-      else toInt1(ys.tail, ys.head + 10 * acc)
+      else toInt1(ys.tail, ys.head + acc * 10)
     toInt1(xs, BigInt(0))
   def cycle: Seq[Int] = xs.tail :+ xs.head
   def cycles: Seq[Seq[Int]] =
     (1 until xs.length).scanLeft(xs)((xs, _) => xs.cycle)
+
+class BigRational(p: BigInt, q: BigInt):
+  require(q != 0)
+  private val g: BigInt = gcd(p, q)
+  private val s: Int = if q >= 0 then +1 else -1
+  val numerator: BigInt = p * s / g
+  val denominator: BigInt = q * s / g
+
+  def this(p: BigInt) = this(p, 1)
+
+  override def toString(): String =
+    if denominator == 1 then numerator.toString else s"$numerator/$denominator"
+
+  def +(that: BigRational) = that match
+    case BigRational(a, b) =>
+      BigRational(numerator * b + a * denominator, denominator * b)
+
+  def unary_- : BigRational = BigRational(-numerator, denominator)
+  def -(that: BigRational) = this + (-that)
+
+  def ==(that: BigRational): Boolean = that match
+    case BigRational(a, b) => numerator * b == a * denominator
+
+  def *(that: BigRational): BigRational = that match
+    case BigRational(a, b) => BigRational(numerator * a, denominator * b)
+
+  def /(that: BigRational): BigRational = that match
+    case BigRational(a, b) => BigRational(numerator * b, denominator * a)
+
+  // WARN: alternative notation, but beware operator precedence!
+  infix def over(that: BigRational): BigRational = this / that
+
+  def +(that: BigInt): BigRational = this + BigRational(that)
+  def -(that: BigInt): BigRational = this - BigRational(that)
+  def *(that: BigInt): BigRational = this * BigRational(that)
+  infix def over(that: BigInt): BigRational = this / BigRational(that)
+  def /(that: BigInt) = this over that
+
+extension (r: BigRational)
+  def toDouble: Double = r match
+    case BigRational(a, b) => a.toDouble / b.toDouble
+
+extension (n: BigInt) def over(r: BigRational): BigRational = BigRational(n) / r
+// WARN: the below cause more trouble than their worth
+//   def +(r: BigRational): BigRational = r + n
+//   def -(r: BigRational): BigRational = -r + n
+//   def *(r: BigRational): BigRational = r * n
+//   def toBigRational: BigRational = BigRational(n)
+
+object BigRational:
+  def unapply(r: BigRational): Option[(BigInt, BigInt)] =
+    Some((r.numerator, r.denominator))
+
+def f = BigRational(1) == BigRational(1, 1)
 
 def unitTests(): Unit =
   println(primes.take(7).toList == List(2, 3, 5, 7, 11, 13, 17))

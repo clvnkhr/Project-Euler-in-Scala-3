@@ -339,12 +339,12 @@ def pe(number: Int) = number match
       if k <= 0 then oddSquares(n)
       else diag(k - 1)(n) - 2 * (n - 1)
 
-    (for
-      k <- 0 to 3
-      n <- 1 to numSquares
-    yield diag(k)(
-      n
-    )).sum - 3 // INFO: take off 3 for overcounting the initial 1 in the center
+    (
+      for
+        k <- 0 to 3
+        n <- 1 to numSquares
+      yield diag(k)(n)
+    ).sum - 3 // INFO: take off 3 for overcounting the initial 1 in the center
 
   case 29 =>
     def naiveCounter(n: Int) =
@@ -656,10 +656,7 @@ def pe(number: Int) = number match
 
     val triangles = from(1, 1).map(sumTo).takeWhile(_ <= max)
 
-    (for
-      pt <- potentialTriangles
-      if triangles.contains(pt)
-    yield 1).sum
+    potentialTriangles.count(triangles.contains)
 
   case 43 =>
     // INFO:
@@ -716,10 +713,7 @@ def pe(number: Int) = number match
   case 45 =>
     from(1, 1)
       .map(i => { i.toLong * (2 * i - 1) })
-      .filter(h => h.isTri && h.isPent)
-      .tail
-      .tail
-      .head
+      .filter(h => h.isTri && h.isPent)(2)
 
   case 46 =>
     val squares = from(1, 1).map(i => i.toLong * i)
@@ -858,6 +852,7 @@ def pe(number: Int) = number match
       k <- 0 to n
       if binom(n, k) > 1_000_000
     yield 1).sum
+
   case 54 =>
     import projecteuler.pokercards.{_, given}
     import math.Ordered.orderingToOrdered
@@ -901,9 +896,13 @@ def pe(number: Int) = number match
     max
 
   case 57 =>
-    var numer = 3
-    var denom = 2
-    ???
+    var r = BigRational(1)
+    val one = r
+    var count = 0
+    for i <- (1 to 1000) do
+      r = one / (r + 1) + 1
+      if r.numerator.numDigits > r.denominator.numDigits then count += 1
+    count
 
   case _ => ???
 
