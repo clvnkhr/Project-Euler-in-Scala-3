@@ -1,9 +1,5 @@
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Deprecation Warning: /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/src/main/scala/Numbertheory.scala:45:22 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m45 |[0m    [33mval[0m [36ms[0m = math.sqrt([31m8[0m * p + [31m1[0m)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                      ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m[33mmethod[0m [35mlong2double[0m in [33mobject[0m [35mLong[0m is deprecated since 2.13.1: Implicit conversion from Long to Double is dangerous because it loses precision. Write `.toDouble` instead.[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m-- Deprecation Warning: /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/src/main/scala/Numbertheory.scala:56:22 [0m[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m56 |[0m    [33mval[0m [36ms[0m = math.sqrt([31m24[0m * p + [31m1[0m)[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m[33m   |[0m                      ^[0m[0m
-[0m[[0m[33mwarn[0m] [0m[0m[33m   |[0m[33mmethod[0m [35mlong2double[0m in [33mobject[0m [35mLong[0m is deprecated since 2.13.1: Implicit conversion from Long to Double is dangerous because it loses precision. Write `.toDouble` instead.[0m
-[0m[[0m[33mwarn[0m] [0m[0mtwo warnings found[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m-- [E040] Syntax Error: /Users/calvinkhor/Documents/GitHub/Project-Euler-in-Scala-3/src/main/scala/ProjectEuler.scala:905:2 [0m[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m905 |[0m  [33mcase[0m _ => [41m???[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m[31m    |[0m  ^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m    |[0m  '=>' expected, but 'case' found[0m
+[0m[[0m[31merror[0m] [0m[0mone error found[0m

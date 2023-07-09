@@ -32,7 +32,11 @@ def sumFifthPowers(n: Int): BigInt = {
   val a = sumTo(n); a * a * (4 * a - 1) / 3
 }
 
-extension (p: Long)
+extension (n: Long)
+  def isPalindrome: Boolean =
+    val str = n.toString
+    str == str.reverse
+
   /** check if the Long is a triangular number, i.e. a number of the form
     * n(n+1)/2.
     *
@@ -42,7 +46,7 @@ extension (p: Long)
   def isTri: Boolean =
     // if p = n(n+1)/2 then 2p = n**2 + n, so
     // n = -1/2 ± sqrt(1 + 8p)/2. Take the positive number
-    val s = math.sqrt(8 * p + 1.toDouble)
+    val s = math.sqrt(8 * n + 1.toDouble)
     s.isWhole && (s.toLong - 1) % 2 == 0
 
   /** check if the Long is a pentagonal number, i.e. a number of the form
@@ -53,7 +57,7 @@ extension (p: Long)
     */
   def isPent: Boolean =
     // A pentagonal number is a number of the form n(3n-1)/2.
-    val s = math.sqrt(24 * p + 1.toDouble)
+    val s = math.sqrt(24 * n + 1.toDouble)
     s.isWhole && (s.toLong + 1) % 6 == 0
 
 /** A slightly faster than normal lazylist of primes computed by trial division.
@@ -91,7 +95,11 @@ extension (n: Int)
 
   def numDigits: Int = { if n < 0 then -n else n }.toString.length
 
-extension (n: BigInt) def **(power: Int) = pow(n, power)
+extension (n: BigInt)
+  def **(power: Int) = pow(n, power)
+  def isPalindrome: Boolean =
+    val str = n.toString
+    str == str.reverse
 
 /** not so naive version of the integer power function, pow(n,power) := n^power.
   * Repeated squaring means that the number of multiplications is logarithmic in
@@ -279,6 +287,12 @@ extension (xs: Seq[Int])
       if ys.isEmpty then acc
       else toInt1(ys.tail, ys.head + 10 * acc)
     toInt1(xs, 0)
+  def toBigInt: BigInt =
+    @annotation.tailrec
+    def toInt1(ys: Seq[Int], acc: BigInt): BigInt =
+      if ys.isEmpty then acc
+      else toInt1(ys.tail, ys.head + 10 * acc)
+    toInt1(xs, BigInt(0))
   def cycle: Seq[Int] = xs.tail :+ xs.head
   def cycles: Seq[Seq[Int]] =
     (1 until xs.length).scanLeft(xs)((xs, _) => xs.cycle)

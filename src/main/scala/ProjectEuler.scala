@@ -23,11 +23,6 @@ def pe(number: Int) = number match
 
   case 4 =>
     val n = 999
-    extension (n: Int)
-      def isPalindrome: Boolean =
-        val str = n.toString
-        str == str.reverse
-
     (
       for
         i <- (1 to n)
@@ -882,6 +877,33 @@ def pe(number: Int) = number match
       //   }")
       h1.toHand > h2.toHand
     }
+
+  case 55 =>
+    extension (n: BigInt)
+      def isNotLychrel(triesRemaining: Int): Boolean =
+        val ds = digits(n)
+        val res = n + ds.reverse.toBigInt
+        res.isPalindrome || {
+          if triesRemaining == 0 then false
+          else res.isNotLychrel(triesRemaining - 1)
+        }
+      def isLychrel: Boolean = isNotLychrel(50)
+    (1 until 10_000).count(_.isLychrel)
+
+  case 56 =>
+    var max: Int = 0
+    for
+      i <- 1 to 100
+      j <- 1 to 100
+      ds = digits(i ** j).sum
+      if ds > max
+    do max = ds
+    max
+
+  case 57 =>
+    var numer = 3
+    var denom = 2
+    ???
 
   case _ => ???
 
