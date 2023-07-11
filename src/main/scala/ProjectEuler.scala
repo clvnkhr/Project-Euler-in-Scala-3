@@ -330,19 +330,12 @@ def pe(number: Int) = number match
     aMax * bMax
 
   case 28 =>
+    import Spiral._
     val sideLength = 1001
-    val numSquares = (sideLength + 1) / 2
-
-    def oddSquares(n: Int) = (2 * n - 1) * (2 * n - 1) // up-right diagonal.
-    def sumOddSquares(n: Int) = n * (4 * n * n - 1) / 3
-    def diag(k: Int)(n: Int): Int =
-      if k <= 0 then oddSquares(n)
-      else diag(k - 1)(n) - 2 * (n - 1)
-
     (
       for
-        k <- 0 to 3
-        n <- 1 to numSquares
+        n <- 1 to numSquares(sideLength)
+        k <- 3 to 0 by -1 // this traverses the corners in sequence
       yield diag(k)(n)
     ).sum - 3 // INFO: take off 3 for overcounting the initial 1 in the center
 
@@ -903,6 +896,17 @@ def pe(number: Int) = number match
       r = one / (r + 1) + 1
       if r.numerator.numDigits > r.denominator.numDigits then count += 1
     count
+
+  case 58 =>
+    import Spiral._
+    var numPrimes = 0
+    def numDiags(n: Int) = 4 * (n - 1) + 1
+    boundary {
+      for n <- from(1, 1)
+      do
+        numPrimes = numPrimes + (0 to 3).map(k => diag(k)(n)).count(_.isPrime)
+        if n > 1 && 10 * numPrimes < numDiags(n) then break(1 + 2 * (n - 1))
+    }
 
   case _ => ???
 

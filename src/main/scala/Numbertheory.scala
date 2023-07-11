@@ -25,12 +25,27 @@ def arithmeticSum(numTerms: Int, from: Int, by: Int): Int =
   (numTerms * (2 * from + (numTerms - 1) * by)) / 2
 def sumTo(n: Int): Int = arithmeticSum(n, 1, 1)
 def sumSquares(n: Int): Long = n * (n + 1) * (2 * n + 1) / 6
+def sumOddSquares(n: Int) = n * (4 * n * n - 1) / 3
 def sumCubes(n: Int): BigInt = pow(sumTo(n), 2)
 def sumFourthPowers(n: Int): BigInt =
   n * (n + 1) * (2 * n + 1) * (3 * n * n + 3 * n - 1) / 30
 def sumFifthPowers(n: Int): BigInt = {
   val a = sumTo(n); a * a * (4 * a - 1) / 3
 }
+
+//spiral functions
+object Spiral:
+  // up-right diagonal.
+  def numSquares(sideLength: Int) = (sideLength + 1) / 2
+  def oddSquares(n: Int) = (2 * n - 1) * (2 * n - 1)
+
+// diag k is the kth diagonal (k=0,1,2,3) on each box of radius n
+// so diag(k)(1)=1,1,1,1,
+// diag(k)(2)=3,5,7,9,
+// diag(k)(3)=11,13,15,17,...
+  def diag(k: Int)(n: Int): Int =
+    if k <= 0 then oddSquares(n)
+    else diag(k - 1)(n) - 2 * (n - 1)
 
 extension (n: Long)
   def isPalindrome: Boolean =
@@ -352,8 +367,6 @@ extension (n: BigInt) def over(r: BigRational): BigRational = BigRational(n) / r
 object BigRational:
   def unapply(r: BigRational): Option[(BigInt, BigInt)] =
     Some((r.numerator, r.denominator))
-
-def f = BigRational(1) == BigRational(1, 1)
 
 def unitTests(): Unit =
   println(primes.take(7).toList == List(2, 3, 5, 7, 11, 13, 17))
