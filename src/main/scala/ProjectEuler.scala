@@ -902,7 +902,7 @@ def pe(number: Int) = number match
     var numPrimes = 0
     def numDiags(n: Int) = 4 * (n - 1) + 1
     boundary {
-      for n <- from(1, 1)
+      for n <- Iterator.from(1)
       do
         numPrimes = numPrimes + (0 to 3).map(k => diag(k)(n)).count(_.isPrime)
         if n > 1 && 10 * numPrimes < numDiags(n) then break(1 + 2 * (n - 1))
@@ -912,6 +912,6 @@ def pe(number: Int) = number match
 
 @main def main(args: Int*): Unit =
   if args.length == 0 then
-    try from(1, 1).foreach(problem => pprint(problem, pe(problem)))
+    try Iterator.from(1).foreach(problem => pprint(problem, pe(problem)))
     catch case e: NotImplementedError => ()
   else args.foreach(problem => pprint(problem, pe(problem)))
