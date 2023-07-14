@@ -858,11 +858,13 @@ def pe(number: Int) = number match
             .splitAt(5)
         )
     )
+    def verify = handPairs.foreach { case (h1: Array[Card], h2: Array[Card]) =>
+      println(s"${h1.toHand} vs ${h2.toHand}: h1 ${
+          if h1.toHand > h2.toHand then "wins" else "loses"
+        }")
+    }
 
     handPairs.count { case (h1: Array[Card], h2: Array[Card]) =>
-      // println(s"${h1.toHand} vs ${h2.toHand}: h1 ${
-      //     if h1.toHand > h2.toHand then "wins" else "loses"
-      //   }")
       h1.toHand > h2.toHand
     }
 
@@ -916,7 +918,8 @@ def pe(number: Int) = number match
       (0 to 2).map(i => (i until cipherText.length by 3).map(cipherText(_)))
 
     extension (c: Char)
-      // empirically determined based on the decryption of branches(0) with the key 'e'.
+      // INFO: empirically determined based on visually inspecting the decryption of branches(0)
+      // with the key 'e'. (all keys a to z were tried)
       // this showed me that the text is likely case sensitive and contains punctuation.
       def isAcceptable: Boolean =
         ('a' to 'z').contains(c)
@@ -939,40 +942,12 @@ def pe(number: Int) = number match
     val decodedBranches =
       branches.map(text => decrypt(text, ('a' to 'z').toList))
 
-    def verify =
+    def printDecodedMessage =
       val mergedBranches = (0 until cipherText.length)
-        .map { x =>
-          decodedBranches(x % 3)(x / 3)
-        }
+        .map { x => decodedBranches(x % 3)(x / 3) }
       println(mergedBranches.map(_.toChar).mkString)
 
     decodedBranches.flatMap(identity).sum
-
-  // val decodedText = cipherText.zipWithIndex
-  //   .map((int, index) => (int ^ predictedKey(index % 3)).toChar)
-  //   .mkString
-
-  // decodedText
-
-  // def toEnglish(cipherText: Array[Int], key: IndexedSeq[Int]): List[String] =
-  //   def toEng1(
-  //       currPos: Int,
-  //       currWord: List[Int],
-  //       acc: List[String]
-  //   ): List[String] =
-  //     if currPos == cipherText.length then acc
-  //     else if currWord.isEmpty then
-  //       toEng1(currPos + 1, cipherText(currPos) :: currWord, acc)
-  //     else ???
-  //   toEng1(0, Nil, Nil)
-
-  // val lowercaseAlphabetASCIIs = 'a'.toInt to 'z'.toInt
-  // for
-  //   c1 <- lowercaseAlphabetASCIIs
-  //   c2 <- lowercaseAlphabetASCIIs
-  //   c3 <- lowercaseAlphabetASCIIs
-  //   key = Vector(c1.toInt, c2.toInt, c3.toInt)
-  // do ()
 
   case _ => ???
 
