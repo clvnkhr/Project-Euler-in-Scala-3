@@ -908,6 +908,72 @@ def pe(number: Int) = number match
         if n > 1 && 10 * numPrimes < numDiags(n) then break(1 + 2 * (n - 1))
     }
 
+  case 59 =>
+    lazy val cipherText =
+      readFile("0059_cipher.txt", _.mkString.split(',').map(_.toInt))
+
+    val branches =
+      (0 to 2).map(i => (i until cipherText.length by 3).map(cipherText(_)))
+
+    extension (c: Char)
+      // empirically determined based on the decryption of branches(0) with the key 'e'.
+      // this showed me that the text is likely case sensitive and contains punctuation.
+      def isAcceptable: Boolean =
+        ('a' to 'z').contains(c)
+          || ('A' to 'Z').contains(c)
+          || Seq(' ', ',', '"', '.').contains(c)
+
+    def decrypt(text: IndexedSeq[Int], keys: List[Char]): IndexedSeq[Int] =
+      keys match
+        case Nil =>
+          throw Exception(s"No key found for text=${text.take(20)}...")
+        case k :: eys =>
+          val candidate = text.map(_ ^ k)
+          if 10 * candidate
+              .map(_.toChar)
+              .count(_.isAcceptable)
+              > 9 * candidate.length
+          then candidate
+          else decrypt(text, eys)
+
+    val decodedBranches =
+      branches.map(text => decrypt(text, ('a' to 'z').toList))
+
+    def verify =
+      val mergedBranches = (0 until cipherText.length)
+        .map { x =>
+          decodedBranches(x % 3)(x / 3)
+        }
+      println(mergedBranches.map(_.toChar).mkString)
+
+    decodedBranches.flatMap(identity).sum
+
+  // val decodedText = cipherText.zipWithIndex
+  //   .map((int, index) => (int ^ predictedKey(index % 3)).toChar)
+  //   .mkString
+
+  // decodedText
+
+  // def toEnglish(cipherText: Array[Int], key: IndexedSeq[Int]): List[String] =
+  //   def toEng1(
+  //       currPos: Int,
+  //       currWord: List[Int],
+  //       acc: List[String]
+  //   ): List[String] =
+  //     if currPos == cipherText.length then acc
+  //     else if currWord.isEmpty then
+  //       toEng1(currPos + 1, cipherText(currPos) :: currWord, acc)
+  //     else ???
+  //   toEng1(0, Nil, Nil)
+
+  // val lowercaseAlphabetASCIIs = 'a'.toInt to 'z'.toInt
+  // for
+  //   c1 <- lowercaseAlphabetASCIIs
+  //   c2 <- lowercaseAlphabetASCIIs
+  //   c3 <- lowercaseAlphabetASCIIs
+  //   key = Vector(c1.toInt, c2.toInt, c3.toInt)
+  // do ()
+
   case _ => ???
 
 @main def main(args: Int*): Unit =

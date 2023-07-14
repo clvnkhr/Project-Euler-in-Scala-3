@@ -34,7 +34,7 @@ def time[R](repetitions: Int, name: String, block: => R): Double =
 
 def readFile[T](filename: String, f: Iterator[String] => T): T =
   val homeDir = java.io.File(".").getAbsolutePath().dropRight(1)
-  val buffered = io.Source.fromFile(s"$homeDir/src/main/scala/$filename")
+  val buffered = io.Source.fromFile(s"$homeDir/data/$filename")
   val out = buffered.getLines.pipe(f)
   buffered.close()
   out
